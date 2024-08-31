@@ -18,7 +18,17 @@ const router = createRouter({
       path: '/bodyfat',
       name: 'Body Fat',
       component: () => import('../views/BodyFat.vue')
-    }
+    },
+    {
+      path: '/water_intake',
+      name: 'Water Intake',
+      component: () => import('../views/WaterIntake.vue')
+    },
+    {
+      path: '/macronutrients',
+      name: 'Macro Nutrientes',
+      component: () => import('../views/MacroNutrientes.vue')
+    },
   ]
 })
 

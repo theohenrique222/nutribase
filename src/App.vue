@@ -1,9 +1,12 @@
 <script setup>
-import Dashboard from "./views/Dashboard.vue";
+import Footer from "./components/Footer.vue";
 
 </script>
 <template>
-  <router-view/>
+  <div>
+    <router-view/>
+    <Footer class="bottom-0"/>
+  </div>
 </template>
 
 <style>

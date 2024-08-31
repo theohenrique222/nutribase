@@ -1,16 +1,18 @@
 <template>
+  <section class="bg-[url('/background.png')]">
     <div class="container mx-auto p-6">
-      <header class="bg-gradient-to-r from-green-500 to-teal-400 text-white text-center p-6 rounded-lg shadow-lg mb-6">
-        <h1 class="text-3xl font-bold">Cálculo de Percentual de Gordura Corporal</h1>
-        <p class="text-lg mt-2">Insira suas medidas para calcular o percentual de gordura corporal.</p>
+      <header class="bg-gradient-to-r from-green-500 to-teal-400 text-white text-center p-6 rounded-md shadow-lg mb-6">
+        <h1 class="lg:text-2xl text-xl font-bold uppercase">Cálculo de Percentual de Gordura Corporal</h1>
+        <p class="lg:text-lg text-base font-light mt-2">Insira suas medidas para calcular o percentual de gordura corporal.</p>
       </header>
   
-      <main class="bg-white p-6 rounded-lg shadow-lg">
+      <main class="bg-gray-100 p-6 rounded-lg shadow-lg">
         <form @submit.prevent="calcularGorduraCorporal" class="space-y-6">
           <div class="grid grid-cols-1 gap-4">
             <div>
               <label for="sexo" class="block text-lg font-medium text-gray-700">Sexo:</label>
               <select v-model="sexo" id="sexo" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                <option value="" disabled selected>Selecione seu sexo</option>
                 <option value="masculino">Masculino</option>
                 <option value="feminino">Feminino</option>
               </select>
@@ -38,7 +40,7 @@
           </div>
   
           <div class="text-center">
-            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg font-bold transition duration-300 ease-in-out hover:bg-blue-600">
+            <button type="submit" class="bg-gradient-to-r from-green-500 to-teal-400 text-white py-4 w-full uppercase rounded-sm transition duration-300 ease-in-out hover:from-green-600 hover:to-teal-700">
               Calcular Percentual de Gordura
             </button>
           </div>
@@ -50,6 +52,8 @@
         </div>
       </main>
     </div>
+  </section>
+    
   </template>
   
   <script>
