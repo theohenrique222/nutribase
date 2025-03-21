@@ -12,22 +12,22 @@ const router = createRouter({
     {
       path: '/basal_metabolism',
       name: 'Metabolismo Basal',
-      component: () => import('../views/BasalMetabolism.vue')
+      component: () => import('../views/pages/BasalMetabolism.vue')
     },
     {
       path: '/bodyfat',
       name: 'Body Fat',
-      component: () => import('../views/BodyFat.vue')
+      component: () => import('../views/pages/BodyFat.vue')
     },
     {
       path: '/water_intake',
       name: 'Water Intake',
-      component: () => import('../views/WaterIntake.vue')
+      component: () => import('../views/pages/WaterIntake.vue')
     },
     {
       path: '/macronutrients',
       name: 'Macro Nutrientes',
-      component: () => import('../views/MacroNutrientes.vue')
+      component: () => import('../views/pages/MacroNutrientes.vue')
     },
   ]
 })
