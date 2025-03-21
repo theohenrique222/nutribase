@@ -1,5 +1,6 @@
 <template>
   <section class="bg-[url('/background.png')] lg:bg-cover relative w-full lg:h-screen h-full">
+
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="container mx-auto p-6 relative z-10">
       <header class="text-center mb-6">
