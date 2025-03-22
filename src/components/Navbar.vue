@@ -1,17 +1,17 @@
 <template>
   <nav class="bg-neutral-800/10 backdrop-blur-md w-full">
-    <main class="flex justify-between max-w-6xl m-auto py-4 items-center">
-      <ul class="flex items-center space-x-4 text-white font-bold text-lg">
-        <li><a href="/" class="">Nutribase</a></li>
+    <main class="flex justify-between max-w-6xl m-auto py-7 items-center">
+      <ul class="flex items-center space-x-4 text-neutral-100 font-bold text-lg">
+        <li><a href="/">Nutribase</a></li>
       </ul>
-      <ul class="flex items-center space-x-6 text-white">
+      <ul class="flex items-center space-x-6 text-neutral-200">
         <li v-for="item in items_menu" :key="item.id">
-          <a :href="item.href" class="hover:underline text-sm">{{ item.name }}</a>
+          <a :href="item.href" class="hover:underline text-xs">{{ item.name }}</a>
         </li>
       </ul>
-      <ul class="flex items-center space-x-6 text-white">
+      <ul class="flex items-center space-x-6">
         <li v-for="social in social_icons" :key="social.id">
-          <a :href="social.href" class="text-sm bg-neutral-50 text-neutral-900 font-extrabold p-1 flex rounded-full"><ion-icon :name="social.name"></ion-icon></a>
+          <a :href="social.href" class="text-sm bg-neutral-100 text-neutral-900 font-extrabold p-1 flex rounded-full"><ion-icon :name="social.name"></ion-icon></a>
         </li>
       </ul>
     </main>
