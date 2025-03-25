@@ -63,21 +63,16 @@
 
       <div class="flex flex-col w-full m-auto lg:h-screen px-5 text-center lg:text-end">
         <div class="flex flex-col flex-grow justify-center">
-          <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl lg:text-5xl py-4">Dietas
-            personalizadas, do seu jeito</h2>
-          <h3 class="uppercase text-lime-400 font-medium text-base md:text-lg py-3">Adapte sua alimentação em tempo
-            real, de acordo com seus objetivos</h3>
+          <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl lg:text-5xl py-4">Descubra seu Metabolismo Basal</h2>
+          <h3 class="uppercase text-lime-400 font-medium text-base md:text-lg py-3">Entenda seu gasto calórico e otimize sua alimentação.</h3>
           <p class="text-neutral-100 font-extralight text-base md:text-lg">
-            Não existe dieta única para todos. No NutriBase, você monta e ajusta seu plano alimentar facilmente,
-            escolhendo entre diferentes objetivos como emagrecimento, ganho de massa ou manutenção. Tudo atualizado em
-            tempo real, com recomendações flexíveis para acompanhar sua rotina e evolução.
+            O metabolismo basal representa a quantidade de calorias que seu corpo queima em repouso para manter funções vitais como respiração e circulação sanguínea. Com o NutriBase, você calcula esse valor de forma rápida e precisa, permitindo personalizar sua alimentação e atingir seus objetivos com mais eficiência.
           </p>
         </div>
 
         <div class="flex justify-center lg:justify-end pb-10 mt-6">
           <a href=""
-            class="bg-lime-400 text-neutral-700 py-3 px-10 rounded-sm uppercase font-bold text-sm md:text-base">Monte
-            sua dieta agora</a>
+            class="bg-lime-400 text-neutral-700 py-3 px-10 rounded-sm uppercase font-bold text-sm md:text-base">Calcule agora</a>
         </div>
 
       </div>
