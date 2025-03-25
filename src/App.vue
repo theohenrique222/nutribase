@@ -7,7 +7,7 @@ import Footer from "./components/Footer.vue";
   <div class="flex flex-col justify-between">
     <Navbar class="fixed top-0 z-50"/>
     <router-view />
-    <Footer class="bottom-0 w-full" />
+    <Footer class="bottom-0 w-full"/>
   </div>
 </template>
 
