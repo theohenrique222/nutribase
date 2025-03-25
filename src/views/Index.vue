@@ -54,16 +54,17 @@
     </main>
   </section>
 
-  <section class="bg-[url('/background-hero.jpg')] bg-cover w-full lg:h-screen min-h-screen">
+  <section class="bg-[url('public/background2.png')] bg-cover w-full lg:h-screen min-h-screen">
     <main class="flex flex-col lg:flex-row w-full max-w-6xl m-auto">
 
-      <div class="flex w-full justify-center mt-10 lg:mt-24">
-        <img src="../assets/avatar-hero.png" alt="Avatar">
+      <div class="w-full max-w-md overflow-hidden flex justify-center">
+        <img src="/avatar_basal.jpg" class="max-w-full h-auto" alt="Avatar">
       </div>
+      
 
       <div class="flex flex-col w-full m-auto lg:h-screen px-5 text-center lg:text-end">
         <div class="flex flex-col flex-grow justify-center">
-          <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl lg:text-5xl py-4">Descubra seu Metabolismo Basal</h2>
+          <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl lg:text-3xl py-4">Descubra seu Metabolismo Basal</h2>
           <h3 class="uppercase text-lime-400 font-medium text-base md:text-lg py-3">Entenda seu gasto calórico e otimize sua alimentação.</h3>
           <p class="text-neutral-100 font-extralight text-base md:text-lg">
             O metabolismo basal representa a quantidade de calorias que seu corpo queima em repouso para manter funções vitais como respiração e circulação sanguínea. Com o NutriBase, você calcula esse valor de forma rápida e precisa, permitindo personalizar sua alimentação e atingir seus objetivos com mais eficiência.
@@ -71,8 +72,8 @@
         </div>
 
         <div class="flex justify-center lg:justify-end pb-10 mt-6">
-          <a href=""
-            class="bg-lime-400 text-neutral-700 py-3 px-10 rounded-sm uppercase font-bold text-sm md:text-base">Calcule agora</a>
+          <a href="/basal_metabolism"
+            class="bg-lime-400 text-neutral-700 hover:bg-neutral-100 py-3 px-10 rounded-sm uppercase font-bold">Calcule agora</a>
         </div>
 
       </div>
