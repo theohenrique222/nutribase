@@ -1,10 +1,10 @@
 <template>
   <section class="bg-[url('/background.jpg')] lg:bg-cover bg-center bg-no-repeat w-full lg:h-screen min-h-screen">
-    <main class="flex flex-col-reverse lg:flex-row w-full lg:max-w-6xl md:max-w-3xl max-w-xs m-auto">
+    <main class="flex flex-col-reverse lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl max-w-xs m-auto">
       <div class="flex w-full lg:h-screen justify-center">
         <img class="lg:mt-24 mt-5 lg:h-auto sm:h-1/2" src="../assets/avatar.webp" alt="Avatar">
       </div>
-      <div class="flex flex-col w-full m-auto lg:h-screen mt-36 lg:text-end">
+      <div class="flex flex-col w-full m-auto lg:h-screen mt-32 lg:text-end">
         <div class="flex flex-col flex-grow justify-center">
           <h2 class="uppercase text-lime-400 font-extrabold text-5xl md:text-6xl lg:text-7xl py-4">NUTRIBASE</h2>
           <h3 class="uppercase text-lime-400 font-medium text-lg md:text-xl lg:text-2xl py-3">Sua saúde, simplificada.
