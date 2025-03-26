@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[url('/background2.png')] min-h-screen">
+  <section class="lg:bg-[url('/background2.png')] min-h-screen">
     <div class="h-16"></div>
     <div class="container mx-auto p-6">
       <header class="bg-gradient-to-r from-blue-500 to-sky-800 text-white text-center p-6 rounded-lg shadow-md mb-6">
