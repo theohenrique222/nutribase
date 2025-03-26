@@ -4,7 +4,7 @@
       <div class="flex w-full lg:h-screen justify-center">
         <img class="lg:mt-24 mt-5 lg:h-auto sm:h-1/2" src="../assets/avatar.webp" alt="Avatar">
       </div>
-      <div class="flex flex-col w-full m-auto lg:h-screen mt-32 lg:text-end">
+      <div class="flex flex-col w-full m-auto lg:h-screen mt-24 lg:text-end">
         <div class="flex flex-col flex-grow justify-center">
           <h2 class="uppercase text-lime-400 font-extrabold text-5xl md:text-6xl lg:text-7xl py-4">NUTRIBASE</h2>
           <h3 class="uppercase text-lime-400 font-medium text-lg md:text-xl lg:text-2xl py-3">Sua saúde, simplificada.
@@ -30,7 +30,7 @@
 
   <section class="bg-[url('/background-2.jpg')] bg-cover w-full lg:h-screen min-h-screen">
     <main class="flex flex-col lg:flex-row w-full max-w-6xl m-auto px-5">
-      <div class="flex flex-col w-full m-auto lg:h-screen pt-10 text-center lg:text-start">
+      <div class="flex flex-col w-full m-auto lg:h-screen pt-10 lg:text-start">
         <div class="flex flex-col flex-grow justify-center">
           <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl py-4">Calcule, ajuste e evolua</h2>
           <h3 class="uppercase text-lime-400 font-medium text-base md:text-lg py-3 ni">Tudo o que você precisa para
