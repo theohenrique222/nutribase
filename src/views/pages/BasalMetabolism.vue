@@ -1,5 +1,6 @@
 <template>
-  <section class="bg-[url('/background.png')]">
+  <section class="bg-[url('/background2.png')] min-h-screen">
+    <div class="h-16"></div>
     <div class="container mx-auto p-6">
       <header class="bg-gradient-to-r from-blue-500 to-sky-800 text-white text-center p-6 rounded-lg shadow-md mb-6">
         <h1 class="lg:text-2xl text-xl font-bold uppercase">Calculadora de Metabolismo Basal</h1>
