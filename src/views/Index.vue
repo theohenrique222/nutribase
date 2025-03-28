@@ -32,7 +32,7 @@
     <main class="flex flex-col lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl max-w-xs m-auto">
       <div class="flex flex-col w-full m-auto lg:h-screen pt-10 lg:text-start">
         <div class="flex flex-col flex-grow justify-center">
-          <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl py-4">Calcule, ajuste e evolua</h2>
+          <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl py-4">Calcule, ajuste e <span class="text-white">evolua</span>!</h2>
           <h3 class="uppercase text-lime-400 font-medium text-base md:text-lg py-3 ni">Tudo o que você precisa para
             cuidar do seu corpo.</h3>
           <p class="text-neutral-100 font-extralight text-base md:text-lg w-full lg:w-10/12 m-auto lg:m-0">
@@ -47,39 +47,49 @@
             class="bg-lime-400 text-neutral-700 py-4 px-8 rounded-3xl uppercase font-bold text-xs md:text-base">Explore
             nossas funcionalidades</a>
         </div>
-
       </div>
       <div class="flex w-full h-0 lg:h-screen"></div>
-
     </main>
   </section>
 
-  <section class="bg-[url('public/background2.png')] bg-cover w-full lg:h-screen min-h-screen">
-    <main class="flex flex-col-reverse lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl max-w-xs m-auto lg:my-0 my-10">
-      <div class="w-full max-w-md overflow-hidden flex justify-center">
-        <img src="/avatar_basal.jpg" class="max-w-full h-auto rounded-tr-3xl rounded-bl-3xl" alt="Avatar">
-      </div>
-      <div class="flex lg:flex-col flex-col-reverse w-full m-auto lg:h-screen px-5 text-center lg:text-end">
+  <section class="bg-[url('public/background3.jpg')] bg-cover w-full lg:h-screen min-h-screen">
+    <main class="flex flex-col-reverse lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl max-w-xs m-auto lg:my-0 my-10 space-x-10">
+      <div class="flex lg:flex-col flex-col-reverse w-full m-auto lg:h-screen text-start">
         <div class="flex flex-col flex-grow justify-center">
-          <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl lg:text-3xl py-4">Descubra seu
-            Metabolismo Basal</h2>
-          <h3 class="uppercase text-lime-400 font-medium text-base md:text-lg py-3">Entenda seu gasto calórico e otimize
-            sua alimentação.</h3>
+          <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl lg:text-4xl py-4">
+            Otimize sua Saúde com Cálculos <span class="text-neutral-200"> Personalizados</span>
+          </h2>
+          <h3 class="uppercase text-lime-400 font-medium text-base md:text-lg py-3">
+            Descubra os números ideais para sua alimentação e bem-estar!
+          </h3>
           <p class="text-neutral-100 font-extralight text-base md:text-lg">
-            O metabolismo basal representa a quantidade de calorias que seu corpo queima em repouso para manter funções
-            vitais como respiração e circulação sanguínea. Com o NutriBase, você calcula esse valor de forma rápida e
-            precisa, permitindo personalizar sua alimentação e atingir seus objetivos com mais eficiência.
+            Cada organismo tem necessidades específicas. Com nossos cálculos personalizados, você saberá exatamente quantas calorias consumir, como dividir seus macronutrientes, a quantidade ideal de água por dia e sua porcentagem de gordura corporal. Faça escolhas mais inteligentes para alcançar seus objetivos!
           </p>
-          <div class="flex justify-center lg:justify-end pb-10 mt-10">
-            <a href="/basal_metabolism"
-              class="bg-lime-400 text-neutral-700 hover:bg-neutral-100 py-3 px-10 rounded-sm uppercase font-bold">Calcule
-              agora</a>
+          <div class="flex text-center w-full mt-10 border-2 border-lime-500 p-2">
+            <div class="w-full border-r p-2">
+              <h3 class="text-xs text-lime-500">Metabolismo Basal</h3>
+              <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
+            </div>
+            <div class="w-full border-r p-2">
+              <h3 class="text-xs text-lime-500">Gordura corporal</h3>
+              <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
+            </div>
+            <div class="w-full border-r p-2">
+              <h3 class="text-xs text-lime-500">Metabolismo Basal</h3>
+              <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
+            </div>
+            <div class="w-full p-2">
+              <h3 class="text-xs text-lime-500">Metabolismo Basal</h3>
+              <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
+            </div>
           </div>
         </div>
-
-
       </div>
-
+      <div class="w-full max-w-md overflow-hidden flex justify-center">
+        <!-- <img src="/avatar_basal.jpg" class="max-w-full h-auto" alt="Avatar"> -->
+      </div>
     </main>
   </section>
+  
+  
 </template>
