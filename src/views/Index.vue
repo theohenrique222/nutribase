@@ -65,29 +65,39 @@
           <p class="text-neutral-100 font-extralight text-base md:text-lg">
             Cada organismo tem necessidades específicas. Com nossos cálculos personalizados, você saberá exatamente quantas calorias consumir, como dividir seus macronutrientes, a quantidade ideal de água por dia e sua porcentagem de gordura corporal. Faça escolhas mais inteligentes para alcançar seus objetivos!
           </p>
-          <div class="flex text-center w-full mt-10 border-2 border-lime-500 p-2">
-            <div class="w-full border-r p-2">
-              <h3 class="text-xs text-lime-500">Metabolismo Basal</h3>
-              <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
-            </div>
-            <div class="w-full border-r p-2">
-              <h3 class="text-xs text-lime-500">Gordura corporal</h3>
-              <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
-            </div>
-            <div class="w-full border-r p-2">
-              <h3 class="text-xs text-lime-500">Metabolismo Basal</h3>
-              <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
-            </div>
+
+          <div class="lg:flex lg:flex-row flex-col lg:py-0 py-2 text-center w-full mt-10 border-2 border-lime-500">
+
             <div class="w-full p-2">
               <h3 class="text-xs text-lime-500">Metabolismo Basal</h3>
               <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
             </div>
+            
+            <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
+
+            <div class="w-full p-2">
+              <h3 class="text-xs text-lime-500">Gordura corporal</h3>
+              <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
+            </div>
+
+            <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
+
+            <div class="w-full p-2">
+              <h3 class="text-xs text-lime-500">Macronutrientes</h3>
+              <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
+            </div>
+
+            <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
+            
+            <div class="w-full p-2">
+              <h3 class="text-xs text-lime-500">Água diaria</h3>
+              <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
+            </div>
+            <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-0 px lg:h-2/3"></div>
           </div>
         </div>
       </div>
-      <div class="w-full max-w-md overflow-hidden flex justify-center">
-        <!-- <img src="/avatar_basal.jpg" class="max-w-full h-auto" alt="Avatar"> -->
-      </div>
+      <div class="w-full max-w-md overflow-hidden flex justify-center"></div>
     </main>
   </section>
   
