@@ -28,8 +28,8 @@
     </main>
   </section>
 
-  <section class="bg-[url('/background-2.jpg')] bg-cover w-full lg:h-screen min-h-screen">
-    <main class="flex flex-col lg:flex-row w-full max-w-6xl m-auto px-5">
+  <section class="bg-[url('/background-2.jpg')] bg-cover w-full lg:h-screen">
+    <main class="flex flex-col lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl max-w-xs m-auto">
       <div class="flex flex-col w-full m-auto lg:h-screen pt-10 lg:text-start">
         <div class="flex flex-col flex-grow justify-center">
           <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl py-4">Calcule, ajuste e evolua</h2>
@@ -44,7 +44,7 @@
 
         <div class="flex justify-center lg:justify-start mb-20 mt-8">
           <a href=""
-            class="bg-lime-400 text-neutral-700 py-4 px-8 rounded-3xl uppercase font-bold text-sm md:text-base">Explore
+            class="bg-lime-400 text-neutral-700 py-4 px-8 rounded-3xl uppercase font-bold text-xs md:text-base">Explore
             nossas funcionalidades</a>
         </div>
 
@@ -55,14 +55,11 @@
   </section>
 
   <section class="bg-[url('public/background2.png')] bg-cover w-full lg:h-screen min-h-screen">
-    <main class="flex flex-col lg:flex-row w-full max-w-6xl m-auto">
-
+    <main class="flex flex-col-reverse lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl max-w-xs m-auto lg:my-0 my-10">
       <div class="w-full max-w-md overflow-hidden flex justify-center">
-        <img src="/avatar_basal.jpg" class="max-w-full h-auto" alt="Avatar">
+        <img src="/avatar_basal.jpg" class="max-w-full h-auto rounded-tr-3xl rounded-bl-3xl" alt="Avatar">
       </div>
-
-
-      <div class="flex flex-col w-full m-auto lg:h-screen px-5 text-center lg:text-end">
+      <div class="flex lg:flex-col flex-col-reverse w-full m-auto lg:h-screen px-5 text-center lg:text-end">
         <div class="flex flex-col flex-grow justify-center">
           <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl lg:text-3xl py-4">Descubra seu
             Metabolismo Basal</h2>
@@ -73,13 +70,13 @@
             vitais como respiração e circulação sanguínea. Com o NutriBase, você calcula esse valor de forma rápida e
             precisa, permitindo personalizar sua alimentação e atingir seus objetivos com mais eficiência.
           </p>
+          <div class="flex justify-center lg:justify-end pb-10 mt-10">
+            <a href="/basal_metabolism"
+              class="bg-lime-400 text-neutral-700 hover:bg-neutral-100 py-3 px-10 rounded-sm uppercase font-bold">Calcule
+              agora</a>
+          </div>
         </div>
 
-        <div class="flex justify-center lg:justify-end pb-10 mt-6">
-          <a href="/basal_metabolism"
-            class="bg-lime-400 text-neutral-700 hover:bg-neutral-100 py-3 px-10 rounded-sm uppercase font-bold">Calcule
-            agora</a>
-        </div>
 
       </div>
 
