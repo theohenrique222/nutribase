@@ -23,7 +23,7 @@
                                 <h3 class="lg:text-xs text-base text-lime-500">
                                     {{ item.title }}
                                 </h3>
-                                <a href="" class="text-white text-xs font-extralight">
+                                <a :href="item.href" class="text-white text-xs font-extralight">
                                     {{ item.button }}
                                 </a>
                             </div>
@@ -44,24 +44,28 @@ export default {
         return {
             links: [
                 { 
-                    id: 1, 
+                    id:     1, 
                     title:  "Metabolismo Basal", 
-                    button: "Calcule agora!" 
+                    button: "Calcule agora!",
+                    href:   "/basal_metabolism" 
                 },
                 { 
-                    id: 2, 
+                    id:     2, 
                     title:  "Gordura corporal", 
-                    button: "Calcule agora!" 
+                    button: "Calcule agora!",
+                    href:   "/bodyfat",
                 },
                 { 
-                    id: 3, 
+                    id:     3, 
                     title:  "Macronutrientes", 
-                    button: "Calcule agora!" 
+                    button: "Calcule agora!",
+                    href:   "/macronutrients",
                 },
                 { 
-                    id: 4, 
+                    id:     4, 
                     title:  "Água diaria", 
-                    button: "Calcule agora!" 
+                    button: "Calcule agora!" ,
+                    href:   "water_intake",
                 }
             ]
         }
