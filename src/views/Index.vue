@@ -69,28 +69,30 @@
           <div class="lg:flex lg:flex-row flex-col lg:py-0 py-2 text-center w-full mt-10 border-2 border-lime-500">
 
             <div class="w-full p-2">
-              <h3 class="text-xs text-lime-500">Metabolismo Basal</h3>
+              <h3 class="lg:text-xs text-base text-lime-500">Metabolismo Basal</h3>
               <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
             </div>
             
             <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
 
             <div class="w-full p-2">
-              <h3 class="text-xs text-lime-500">Gordura corporal</h3>
+              <h3 class="lg:text-xs text-base text-lime-500">Gordura corporal</h3>
               <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
             </div>
 
             <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
 
             <div class="w-full p-2">
-              <h3 class="text-xs text-lime-500">Macronutrientes</h3>
+              <h3 class="lg:text-xs text-base text-lime-500">
+                Macronutrientes</h3>
               <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
             </div>
 
             <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
             
             <div class="w-full p-2">
-              <h3 class="text-xs text-lime-500">Água diaria</h3>
+              <h3 class="lg:text-xs text-base  text-lime-500">
+                Água diaria</h3>
               <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
             </div>
             <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-0 px lg:h-2/3"></div>
