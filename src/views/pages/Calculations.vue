@@ -17,37 +17,18 @@
                         alcançar seus objetivos!
                     </p>
 
-                    <div
-                        class="lg:flex lg:flex-row flex-col lg:py-0 py-2 text-center w-full mt-10 border-2 border-lime-500">
-
-                        <div class="w-full p-2">
-                            <h3 class="lg:text-xs text-base text-lime-500">Metabolismo Basal</h3>
-                            <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
-                        </div>
-
-                        <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
-
-                        <div class="w-full p-2">
-                            <h3 class="lg:text-xs text-base text-lime-500">Gordura corporal</h3>
-                            <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
-                        </div>
-
-                        <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
-
-                        <div class="w-full p-2">
-                            <h3 class="lg:text-xs text-base text-lime-500">
-                                Macronutrientes</h3>
-                            <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
-                        </div>
-
-                        <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
-
-                        <div class="w-full p-2">
-                            <h3 class="lg:text-xs text-base  text-lime-500">
-                                Água diaria</h3>
-                            <a href="" class="text-white text-xs font-extralight">Calcule agora!</a>
-                        </div>
-                        <div class="bg-neutral-100 m-auto w-2/3 h-px lg:w-0 px lg:h-2/3"></div>
+                    <div class="lg:flex lg:flex-row flex-col lg:py-0 py-2 text-center w-full mt-10 border-2 border-lime-500">
+                        <template v-for="(item, index) in links" :key="item.id">
+                            <div class="w-full p-2">
+                                <h3 class="lg:text-xs text-base text-lime-500">
+                                    {{ item.title }}
+                                </h3>
+                                <a href="" class="text-white text-xs font-extralight">
+                                    {{ item.button }}
+                                </a>
+                            </div>
+                            <div v-if="index < links.length - 1" class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
+                        </template>
                     </div>
                 </div>
             </div>
@@ -58,8 +39,32 @@
 
 <script>
 export default {
-
+    name: "Calculations",
+    data() {
+        return {
+            links: [
+                { 
+                    id: 1, 
+                    title:  "Metabolismo Basal", 
+                    button: "Calcule agora!" 
+                },
+                { 
+                    id: 2, 
+                    title:  "Gordura corporal", 
+                    button: "Calcule agora!" 
+                },
+                { 
+                    id: 3, 
+                    title:  "Macronutrientes", 
+                    button: "Calcule agora!" 
+                },
+                { 
+                    id: 4, 
+                    title:  "Água diaria", 
+                    button: "Calcule agora!" 
+                }
+            ]
+        }
+    }
 }
 </script>
-
-<style></style>
