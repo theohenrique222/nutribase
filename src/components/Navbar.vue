@@ -1,8 +1,12 @@
 <template>
-  <nav class=" backdrop-blur-sm w-full">
+  <nav class=" backdrop-blur-sm w-full border-b border-b-neutral-100/20">
     <main class="flex justify-between lg:max-w-6xl md:max-w-3xl max-w-xs m-auto px-2 sm:px-3 py-5 items-center">
       <ul class="flex items-center space-x-4 text-neutral-100 font-bold lg:text-3xl text-2xl">
-        <li><a href="/">Nutribase</a></li>
+        <li>
+          <a href="/">
+            Nutribase
+          </a>
+        </li>
       </ul>
 
       <button @click="toggleMenu" class="lg:hidden flex text-neutral-100 text-3xl">
@@ -11,8 +15,9 @@
 
       <ul class="hidden lg:flex items-center space-x-6 text-neutral-100">
         <li v-for="item in items_menu" :key="item.id">
-          <a :href="item.href" class="py-5 transition-all hover:border-b-4 border-neutral-200 text-sm">{{ item.name
-          }}</a>
+          <a :href="item.href" class="py-5 transition-all hover:border-b-4 border-neutral-200 text-sm">
+            {{ item.name }}
+          </a>
         </li>
       </ul>
       <ul class="hidden lg:flex items-center space-x-6">
