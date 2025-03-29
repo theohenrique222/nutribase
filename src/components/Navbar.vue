@@ -41,7 +41,6 @@
         </li>
       </div>
     </div>
-
   </nav>
 </template>
 

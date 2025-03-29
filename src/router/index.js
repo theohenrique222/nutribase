@@ -5,7 +5,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      patch: '/',
+      patch: '/asd',
       name:  'Index',
       component: Index
     },
