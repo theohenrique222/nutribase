@@ -1,6 +1,6 @@
 <template>
   <nav class="bg-neutral-800/10 backdrop-blur-sm w-full">
-    <main class="flex justify-between lg:max-w-6xl md:max-w-3xl max-w-xs m-auto px-2 sm:px-3 py-5 items-center">
+    <main class="flex justify-between lg:max-w-6xl md:max-w-3xl sm:max-w-xl max-w-xs m-auto px-2 sm:px-3 py-5 items-center">
       <ul class="flex items-center space-x-4 text-neutral-100 font-bold lg:text-3xl text-2xl">
         <li><a href="/">Nutribase</a></li>
       </ul>
