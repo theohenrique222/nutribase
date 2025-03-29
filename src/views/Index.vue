@@ -1,7 +1,7 @@
 <template>
-  <section class="bg-[url('/background.jpg')] lg:bg-cover bg-center bg-no-repeat w-full min-h-screen">
+  <section class="bg-[url('background.jpg')] lg:bg-cover bg-center bg-no-repeat w-full">
     <main class="flex flex-col-reverse lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl max-w-xs m-auto">
-      <div class="flex w-full">
+      <div class="lg:flex hidden w-full">
         <img class="lg:mt-24 mt-5 bottom-0 lg:h-auto sm:h-1/2" src="../assets/avatar.webp" alt="Avatar">
       </div>
       <div class="flex flex-col w-full m-auto lg:h-screen mt-24 lg:text-end">
@@ -28,7 +28,7 @@
     </main>
   </section>
 
-  <section class="bg-[url('/background-2.jpg')] bg-cover w-full lg:h-screen">
+  <section class="bg-[url('background-2.jpg')] bg-cover w-full lg:h-screen">
     <main class="flex flex-col lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl max-w-xs m-auto">
       <div class="flex flex-col w-full m-auto lg:h-screen pt-10 lg:text-start">
         <div class="flex flex-col flex-grow justify-center">
@@ -52,7 +52,7 @@
     </main>
   </section>
 
-  <section class="bg-[url('public/background3.jpg')] bg-cover w-full lg:h-screen min-h-screen">
+  <section class="bg-[url('background3.jpg')] bg-cover w-full lg:h-screen min-h-screen">
     <main class="flex flex-col-reverse lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl max-w-xs m-auto lg:my-0 my-10 space-x-10">
       <div class="flex lg:flex-col flex-col-reverse w-full m-auto lg:h-screen text-start">
         <div class="flex flex-col flex-grow justify-center">
