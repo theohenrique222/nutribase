@@ -1,6 +1,6 @@
 <template>
   <nav class="backdrop-blur-sm w-full border-b border-b-neutral-100/20 z-50 fixed top-0">
-    <main class="flex justify-between lg:max-w-6xl md:max-w-3xl max-w-xs m-auto px-2 sm:px-3 lg:py-5 py-3 items-center">
+    <main class="flex justify-between lg:max-w-6xl md:max-w-3xl sm:max-w-xl max-w-xs m-auto px-2 sm:px-3 lg:py-5 py-3 items-center">
       <ul class="flex items-center space-x-4 text-neutral-100 font-bold lg:text-3xl text-2xl">
         <li>
           <a href="/">
