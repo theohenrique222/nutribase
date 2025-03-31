@@ -19,11 +19,11 @@
 
                     <div class="lg:flex lg:flex-row flex-col lg:py-0 py-2 text-center w-full mt-10 border-2 border-lime-500">
                         <template v-for="(item, index) in links" :key="item.id">
-                            <div class="w-full p-2">
-                                <h3 class="lg:text-xs text-base text-lime-500">
+                            <div class="w-full p-3">
+                                <h3 class="lg:text-sm text-base text-lime-500">
                                     {{ item.title }}
                                 </h3>
-                                <a :href="item.href" class="text-white text-xs font-extralight">
+                                <a :href="item.href" class="text-white text-sm font-extralight">
                                     {{ item.button }}
                                 </a>
                             </div>
