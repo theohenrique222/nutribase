@@ -44,7 +44,7 @@
             class="bg-gradient-to-r from-blue-500 to-sky-800 text-white py-4 w-full uppercase rounded-sm transition duration-300 ease-in-out hover:from-blue-600 hover:to-blue-700">Calcular</button>
         </form>
 
-        <div v-if="resultado" class="bg-white p-6 rounded-lg shadow-lg mt-6 text-center">
+        <div v-if="resultado" class="bg-sky-700 p-6 rounded-lg shadow-lg mt-6 text-center">
           <h2 class="text-2xl font-bold mb-4">Resultado</h2>
           <p class="text-lg">Seu metabolismo basal é: <strong class="font-semibold">{{ resultado.calorias }}
               calorias</strong> por dia.</p>
