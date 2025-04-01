@@ -2,9 +2,7 @@
   <section class="bg-[url('/background2.png')] min-h-screen">
     <div class="h-16"></div>
     <div class="container mx-auto p-6">
-      <header
-        class="bg-gradient-to-r from-blue-500 to-teal-400 text-white text-center p-6 rounded-md shadow-lg mb-6"
-      >
+      <header class="bg-gradient-to-r from-blue-500 to-teal-400 text-white text-center p-6 rounded-md shadow-lg mb-6">
         <h1 class="lg:text-2xl text-xl font-bold uppercase">
           Cálculo de Quantidade de Água Diária
         </h1>
@@ -18,29 +16,16 @@
         <form @submit.prevent="calcularAguaDiaria" class="space-y-6">
           <div class="grid grid-cols-1 gap-4">
             <div>
-              <label for="peso" class="block text-lg font-medium text-gray-700"
-                >Peso (kg):</label
-              >
-              <input
-                type="number"
-                v-model="peso"
-                id="peso"
-                class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                required
-              />
+              <label for="peso" class="block text-lg font-medium text-gray-700">Peso (kg):</label>
+              <input type="number" v-model="peso" id="peso"
+                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-gray-50 text-black rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                required />
             </div>
 
             <div>
-              <label
-                for="atividade"
-                class="block text-lg font-medium text-gray-700"
-                >Nível de Atividade:</label
-              >
-              <select
-                v-model="atividade"
-                id="atividade"
-                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              >
+              <label for="atividade" class="block text-lg font-medium text-gray-700">Nível de Atividade:</label>
+              <select v-model="atividade" id="atividade"
+                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white text-black rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                 <option value="" disabled selected>Selecione a sua atividade</option>
                 <option value="sedentario">Sedentário</option>
                 <option value="moderado">Moderado</option>
@@ -50,23 +35,19 @@
           </div>
 
           <div class="text-center pb-10">
-            <button
-              type="submit"
-              class="bg-gradient-to-r from-blue-500 to-teal-400 text-white py-4 w-full uppercase rounded-sm transition duration-300 ease-in-out hover:from-blue-600 hover:to-teal-700"
-            >
+            <button type="submit"
+              class="bg-gradient-to-r from-blue-500 to-teal-400 text-white py-4 w-full uppercase rounded-sm transition duration-300 ease-in-out hover:from-blue-600 hover:to-teal-700">
               Calcular Água Diária
             </button>
           </div>
         </form>
 
-        <div
-          v-if="resultado"
-          class="bg-blue-100 p-6 rounded-lg shadow-lg mt-6 text-center"
-        >
+        <div v-if="resultado" class="bg-blue-700 p-6 rounded-lg shadow-lg mt-6 text-center">
           <h2 class="text-2xl font-bold">Resultado</h2>
           <p class="text-lg mt-2">
-            Você deve consumir aproximadamente
-            <span class="font-bold">{{ resultado }} litros</span> de água
+            Você deve consumir aproximadamente<br>
+            <span class="font-bold">{{ resultado }} litros <br> 
+            </span> de água
             diariamente.
           </p>
         </div>
@@ -74,8 +55,8 @@
     </div>
   </section>
 </template>
-  
-  <script>
+
+<script>
 export default {
   name: "Water Intake",
   data() {
@@ -107,8 +88,8 @@ export default {
   },
 };
 </script>
-  
-  <style scoped>
+
+<style scoped>
 .container {
   max-width: 600px;
 }
