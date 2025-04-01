@@ -25,7 +25,7 @@
                 type="number"
                 v-model="peso"
                 id="peso"
-                class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                class="mt-1 block w-full py-2 px-3 border text-black bg-gray-50 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                 required
               />
             </div>
@@ -39,7 +39,7 @@
               <select
                 v-model="objetivo"
                 id="objetivo"
-                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-black"
               >
                 <option value="" disabled selected>Selecione o seu objetivo</option>
                 <option value="manutencao">Manutenção</option>
@@ -57,7 +57,7 @@
               <select
                 v-model="nivelAtividade"
                 id="nivelAtividade"
-                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-black"
               >
                 <option value="" disabled selected>Selecione seu nível de atividade</option>
                 <option value="sedentario">Sedentário</option>
@@ -80,7 +80,7 @@
 
         <div
           v-if="resultado"
-          class="bg-blue-100 p-6 rounded-lg shadow-lg mt-6 text-center"
+          class="bg-blue-700 p-6 rounded-lg shadow-lg mt-6 text-center"
         >
           <h2 class="text-2xl font-bold">Resultado</h2>
           <p class="text-lg mt-2">
