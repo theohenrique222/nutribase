@@ -1,9 +1,9 @@
 <script setup>
-import Navbar from "./components/Navbar.vue";
-import Footer from "./components/Footer.vue";
-import Calculations from "./views/pages/Calculations.vue";
-import Features from "./views/pages/Features.vue";
-import Hero from "./views/pages/Hero.vue";
+import Navbar from "../components/Navbar.vue";
+import Footer from "../components/Footer.vue";
+import Calculations from "./pages/Calculations.vue";
+import Features from "./pages/Features.vue";
+import Hero from "./pages/Hero.vue";
 
 </script>
 <template>
