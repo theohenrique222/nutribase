@@ -15,7 +15,7 @@
                             {{ item.caption }}
                         </h3>
                         <p class="text-neutral-50 font-extralight text-base md:text-lg lg:mb-0 mb-10">
-                            {{ item.content }}
+                            {{ $t('description') }}
                         </p>
                     </div>
                 </div>
