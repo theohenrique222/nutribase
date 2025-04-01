@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-[url('background.jpg')] lg:bg-cover bg-center bg-no-repeat w-full">
+    <section id="hero" class="bg-[url('background.jpg')] lg:bg-cover bg-center bg-no-repeat w-full">
         <main class="flex flex-col-reverse lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl sm:max-w-xl max-w-xs m-auto">
             <div class="lg:flex hidden w-full">
                 <img class="lg:mt-24 mt-5 bottom-0 lg:h-auto sm:h-1/2" src="/avatar.webp" alt="Avatar">

@@ -63,21 +63,21 @@ export default {
       items_menu: [
         { 
           id:   1, 
-          name: "Metabolismo Basal", 
-          href: '/basal_metabolism' },
+          name: "Início", 
+          href: '#hero' },
         { 
           id:   2, 
-          name: "Gordura Corporal", 
-          href: '/bodyfat' 
+          name: "Funcionalidades", 
+          href: '#features' 
         },
         { 
           id:   3, 
-          name: "Água Diaria", 
-          href: '/water_intake' 
+          name: "Calculadora", 
+          href: '#calculations' 
         },
         { 
           id:   4, 
-          name: "Macronutrientes", 
+          name: "Contate-me", 
           href: '/macronutrients' 
         },
       ],

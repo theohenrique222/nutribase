@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-[url('background-2.jpg')] bg-cover w-full lg:h-screen">
+    <section id="features" class="bg-[url('background-2.jpg')] bg-cover w-full lg:h-screen">
         <main
             class="flex flex-col lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl sm:max-w-xl max-w-xs m-auto">
             <div class="flex flex-col w-full m-auto lg:h-screen pt-10 lg:text-start">
