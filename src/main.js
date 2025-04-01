@@ -6,6 +6,8 @@ import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
 import Button from "primevue/button"
 import Dialog from 'primevue/dialog';
+import { VuePreloader } from 'vue-preloader';
+import '../node_modules/vue-preloader/dist/style.css'
 
 const app = createApp(App);
 
@@ -17,5 +19,6 @@ app.use(PrimeVue, {
 });
 app.component('Button', Button);
 app.component('Dialog', Dialog);
+app.component('VuePreloader', VuePreloader);
 
 app.mount('#app');
