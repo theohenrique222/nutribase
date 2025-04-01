@@ -16,14 +16,14 @@
                         água por dia e sua porcentagem de gordura corporal. Faça escolhas mais inteligentes para
                         alcançar seus objetivos!
                     </p>
-
+                    
                     <div class="lg:flex lg:flex-row flex-col lg:py-0 py-2 text-center w-full mt-10 border-2 border-lime-500">
                         <template v-for="(item, index) in links" :key="item.id">
                             <div class="w-full p-3">
                                 <h3 class="lg:text-sm text-base text-lime-500">
                                     {{ item.title }}
                                 </h3>
-                                <a :href="item.href" class="text-white text-sm font-extralight">
+                                <a @click="openDialog(item)" class="text-white text-sm font-extralight hover:underline hover:text-lime-100 cursor-pointer">
                                     {{ item.button }}
                                 </a>
                             </div>
@@ -35,6 +35,18 @@
             <div class="w-full max-w-md overflow-hidden flex justify-center"></div>
         </main>
     </section>
+
+    <!-- Modal -->
+    <Dialog v-model:visible="visible" modal :header="selectedItem?.title || 'Detalhes'" :style="{ width: '25rem' }">
+        <span class="text-surface-500 dark:text-surface-400 block mb-8">
+            Detalhes do cálculo para <strong>{{ selectedItem?.title }}</strong>
+        </span>
+        <p class="text-sm text-neutral-200">{{ selectedItem?.description || "Sem descrição disponível." }}</p>
+        <div class="flex justify-end gap-2 mt-4">
+            <Button type="button" label="Fechar" severity="secondary" @click="visible = false"></Button>
+            <Button type="button" label="Acessar" @click="goToPage(selectedItem.href)"></Button>
+        </div>
+    </Dialog>
 </template>
 
 <script>
@@ -42,33 +54,50 @@ export default {
     name: "Calculations",
     data() {
         return {
+            visible: false,
+            selectedItem: null, // Armazena o item selecionado
             links: [
                 { 
-                    id:     1, 
-                    title:  "Metabolismo Basal", 
+                    id: 1, 
+                    title: "Metabolismo Basal", 
                     button: "Calcule agora!",
-                    href:   "/basal_metabolism" 
+                    href: "/basal_metabolism",
+                    description: "Saiba quantas calorias seu corpo precisa para funcionar em repouso."
                 },
                 { 
-                    id:     2, 
-                    title:  "Gordura corporal", 
+                    id: 2, 
+                    title: "Gordura corporal", 
                     button: "Calcule agora!",
-                    href:   "/bodyfat",
+                    href: "/bodyfat",
+                    description: "Descubra sua porcentagem de gordura corporal com precisão."
                 },
                 { 
-                    id:     3, 
-                    title:  "Macronutrientes", 
+                    id: 3, 
+                    title: "Macronutrientes", 
                     button: "Calcule agora!",
-                    href:   "/macronutrients",
+                    href: "/macronutrients",
+                    description: "Calcule a distribuição ideal de proteínas, carboidratos e gorduras."
                 },
                 { 
-                    id:     4, 
-                    title:  "Água diaria", 
-                    button: "Calcule agora!" ,
-                    href:   "water_intake",
+                    id: 4, 
+                    title: "Água diária", 
+                    button: "Calcule agora!",
+                    href: "/water_intake",
+                    description: "Descubra a quantidade ideal de água para consumir diariamente."
                 }
             ]
+        };
+    },
+    methods: {
+        openDialog(item) {
+            this.selectedItem = item;
+            this.visible = true;
+        },
+        goToPage(url) {
+            if (url) {
+                window.location.href = url;
+            }
         }
     }
-}
+};
 </script>
