@@ -4,20 +4,20 @@
             class="flex flex-col-reverse lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl sm:max-w-xl max-w-xs m-auto lg:my-0 my-10 space-x-10">
             <div class="flex lg:flex-col flex-col-reverse w-full m-auto lg:h-screen text-start">
                 <div class="flex flex-col flex-grow justify-center">
-                    <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl lg:text-4xl py-4">
+                    <h2 data-aos="fade-up" data-aos-duration="700" class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl lg:text-4xl py-4">
                         Otimize sua Saúde com Cálculos <span class="text-neutral-200"> Personalizados</span>
                     </h2>
-                    <h3 class="uppercase text-lime-400 font-medium text-base md:text-lg py-3">
+                    <h3 data-aos="fade-up" data-aos-duration="1000" class="uppercase text-lime-400 font-medium text-base md:text-lg py-3">
                         Descubra os números ideais para sua alimentação e bem-estar!
                     </h3>
-                    <p class="text-neutral-100 font-extralight text-base md:text-lg">
+                    <p data-aos="fade-up" data-aos-duration="1000" class="text-neutral-100 font-extralight text-base md:text-lg">
                         Cada organismo tem necessidades específicas. Com nossos cálculos personalizados, você saberá
                         exatamente quantas calorias consumir, como dividir seus macronutrientes, a quantidade ideal de
                         água por dia e sua porcentagem de gordura corporal. Faça escolhas mais inteligentes para
                         alcançar seus objetivos!
                     </p>
 
-                    <div
+                    <div data-aos="fade-up" data-aos-duration="1000" 
                         class="lg:flex lg:flex-row flex-col lg:py-0 py-2 text-center w-full mt-10 border-2 border-lime-500">
                         <template v-for="(item, index) in links" :key="item.id">
                             <div @click="openDialog(item)"

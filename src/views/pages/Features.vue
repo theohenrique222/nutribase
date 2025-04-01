@@ -3,7 +3,7 @@
         <main
             class="flex flex-col lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl sm:max-w-xl max-w-xs m-auto">
             <div class="flex flex-col w-full m-auto lg:h-screen pt-10 lg:text-start">
-                <div class="flex flex-col flex-grow justify-center">
+                <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col flex-grow justify-center">
                     <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl py-4">Calcule, ajuste e <span
                             class="text-white">evolua</span>!</h2>
                     <h3 class="uppercase text-lime-400 font-medium text-base md:text-lg py-3 ni">Tudo o que você precisa
@@ -18,7 +18,7 @@
                     </p>
                 </div>
 
-                <div class="flex justify-center lg:justify-start mb-20 mt-8">
+                <div data-aos="fade-up" data-aos-duration="1000" class="flex justify-center lg:justify-start mb-20 mt-8">
                     <a href=""
                         class="bg-lime-400 text-neutral-700 py-4 px-8 rounded-3xl uppercase font-bold text-xs md:text-base">Explore
                         nossas funcionalidades</a>
