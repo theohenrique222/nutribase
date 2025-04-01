@@ -13,7 +13,7 @@ import Footer from "../components/Footer.vue";
       </TemplatesPage>
       <TemplatesFooter />
       <VuePreloader
-        background-color="#091a28"
+        background-color="#232425"
         color="#ffffff"
         transition-type="fade-up"
         :loading-speed="25"
