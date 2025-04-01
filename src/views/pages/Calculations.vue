@@ -16,18 +16,21 @@
                         água por dia e sua porcentagem de gordura corporal. Faça escolhas mais inteligentes para
                         alcançar seus objetivos!
                     </p>
-                    
-                    <div class="lg:flex lg:flex-row flex-col lg:py-0 py-2 text-center w-full mt-10 border-2 border-lime-500">
+
+                    <div
+                        class="lg:flex lg:flex-row flex-col lg:py-0 py-2 text-center w-full mt-10 border-2 border-lime-500">
                         <template v-for="(item, index) in links" :key="item.id">
-                            <div class="w-full p-3">
+                            <div @click="openDialog(item)"
+                                class="w-full p-3 hover:bg-lime-500/30 cursor-pointer transition-all">
                                 <h3 class="lg:text-sm text-base text-lime-500">
                                     {{ item.title }}
                                 </h3>
-                                <a @click="openDialog(item)" class="text-white text-sm font-extralight hover:underline hover:text-lime-100 cursor-pointer">
+                                <h3 class="text-white text-sm font-extralight">
                                     {{ item.button }}
-                                </a>
+                                </h3>
                             </div>
-                            <div v-if="index < links.length - 1" class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
+                            <div v-if="index < links.length - 1"
+                                class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
                         </template>
                     </div>
                 </div>
@@ -36,7 +39,6 @@
         </main>
     </section>
 
-    <!-- Modal -->
     <Dialog v-model:visible="visible" modal :header="selectedItem?.title || 'Detalhes'" :style="{ width: '25rem' }">
         <span class="text-surface-500 dark:text-surface-400 block mb-8">
             Detalhes do cálculo para <strong>{{ selectedItem?.title }}</strong>
@@ -55,32 +57,32 @@ export default {
     data() {
         return {
             visible: false,
-            selectedItem: null, // Armazena o item selecionado
+            selectedItem: null,
             links: [
-                { 
-                    id: 1, 
-                    title: "Metabolismo Basal", 
+                {
+                    id: 1,
+                    title: "Metabolismo Basal",
                     button: "Calcule agora!",
                     href: "/basal_metabolism",
                     description: "Saiba quantas calorias seu corpo precisa para funcionar em repouso."
                 },
-                { 
-                    id: 2, 
-                    title: "Gordura corporal", 
+                {
+                    id: 2,
+                    title: "Gordura corporal",
                     button: "Calcule agora!",
                     href: "/bodyfat",
                     description: "Descubra sua porcentagem de gordura corporal com precisão."
                 },
-                { 
-                    id: 3, 
-                    title: "Macronutrientes", 
+                {
+                    id: 3,
+                    title: "Macronutrientes",
                     button: "Calcule agora!",
                     href: "/macronutrients",
                     description: "Calcule a distribuição ideal de proteínas, carboidratos e gorduras."
                 },
-                { 
-                    id: 4, 
-                    title: "Água diária", 
+                {
+                    id: 4,
+                    title: "Água diária",
                     button: "Calcule agora!",
                     href: "/water_intake",
                     description: "Descubra a quantidade ideal de água para consumir diariamente."

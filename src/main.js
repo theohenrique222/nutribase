@@ -7,8 +7,6 @@ import Aura from '@primeuix/themes/aura';
 import Button from "primevue/button"
 import Dialog from 'primevue/dialog';
 
-
-
 const app = createApp(App);
 
 app.use(router);
