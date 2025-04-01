@@ -51,7 +51,7 @@
           </div>
         </form>
   
-        <div v-if="resultado" class="bg-green-100 p-6 rounded-lg shadow-lg mt-6 text-center">
+        <div v-if="resultado" class="bg-green-700 p-6 rounded-lg shadow-lg mt-6 text-center">
           <h2 class="text-2xl font-bold">Resultado</h2>
           <p class="text-lg mt-2">Seu percentual de gordura corporal é aproximadamente <span class="font-bold">{{ resultado }}%</span>.</p>
         </div>
