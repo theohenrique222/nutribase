@@ -7,12 +7,14 @@
         <p class="lg:text-lg text-base font-light mt-2">Insira suas medidas para calcular o percentual de gordura corporal.</p>
       </header>
   
-      <main class="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <main class="bg-gray-100/20 backdrop-blur-sm p-6 rounded-lg shadow-2xl mb-6">
         <form @submit.prevent="calcularGorduraCorporal" class="space-y-6">
           <div class="grid grid-cols-1 gap-4">
             <div>
-              <label for="sexo" class="block text-lg font-medium text-gray-700">Sexo:</label>
-              <select v-model="sexo" id="sexo" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+              <label for="sexo" class="block font-bold mb-2">
+                Sexo:
+              </label>
+              <select v-model="sexo" id="sexo" class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                 <option value="" disabled selected>Selecione seu sexo</option>
                 <option value="masculino">Masculino</option>
                 <option value="feminino">Feminino</option>
@@ -20,17 +22,19 @@
             </div>
   
             <div>
-              <label for="altura" class="block text-lg font-medium text-gray-700">Altura (cm):</label>
+              <label for="altura" class="block font-bold mb-2">
+                Altura (cm):
+              </label>
               <input type="number" v-model="altura" id="altura" class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
             </div>
   
             <div>
-              <label for="circunferenciaCintura" class="block text-lg font-medium text-gray-700">Circunferência da Cintura (cm):</label>
+              <label for="circunferenciaCintura" class="block font-bold mb-2">Circunferência da Cintura (cm):</label>
               <input type="number" v-model="circunferenciaCintura" id="circunferenciaCintura" class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
             </div>
   
             <div>
-              <label for="circunferenciaPescoço" class="block text-lg font-medium text-gray-700">Circunferência do Pescoço (cm):</label>
+              <label for="circunferenciaPescoço" class="block font-bold mb-2">Circunferência do Pescoço (cm):</label>
               <input type="number" v-model="circunferenciaPescoço" id="circunferenciaPescoço" class="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
             </div>
   

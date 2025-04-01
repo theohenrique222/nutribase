@@ -11,7 +11,9 @@
       <main class="bg-gray-100/20 backdrop-blur-sm p-6 rounded-lg shadow-2xl mb-6">
         <form @submit.prevent="calcular" class="space-y-6">
           <div class="form-group">
-            <label for="peso" class="block font-bold mb-2">Peso (kg):</label>
+            <label for="peso" class="block font-bold mb-2">
+              Peso (kg):
+            </label>
             <Input type="number" id="peso" v-model="peso" required
               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 " />
           </div>
