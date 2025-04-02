@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n';
-import en from './lang/en';
 import pt from './lang/pt';
+import en from './lang/en';
 
 const i18n = createI18n({
   locale: 'pt', // Idioma padrão
