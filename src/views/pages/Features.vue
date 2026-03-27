@@ -1,15 +1,15 @@
 <template>
     <section id="features" class="bg-[url('background-2.jpg')] bg-cover w-full lg:h-screen">
         <main
-            class="flex flex-col lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl sm:max-w-xl max-w-xs m-auto">
-            <div class="flex flex-col w-full m-auto lg:h-screen pt-10 lg:text-start">
-                <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col flex-grow justify-center">
-                    <h2 class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl py-4">Calcule, ajuste e <span
+            class="flex flex-col w-full max-w-xs px-2 m-auto lg:flex-row sm:px-3 lg:max-w-6xl md:max-w-3xl sm:max-w-xl">
+            <div class="flex flex-col w-full pt-10 m-auto lg:h-screen lg:text-start">
+                <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col justify-center flex-grow">
+                    <h2 class="py-4 text-3xl font-extrabold uppercase text-lime-400 md:text-4xl">Calcule, ajuste e <span
                             class="text-white">evolua</span>!</h2>
-                    <h3 class="uppercase text-lime-400 font-medium text-base md:text-lg py-3 ni">Tudo o que você precisa
+                    <h3 class="py-3 text-base font-medium uppercase text-lime-400 md:text-lg ni">Tudo o que você precisa
                         para
                         cuidar do seu corpo.</h3>
-                    <p class="text-neutral-100 font-extralight text-base md:text-lg w-full lg:w-10/12 m-auto lg:m-0">
+                    <p class="w-full m-auto text-base text-neutral-100 font-extralight md:text-lg lg:w-10/12 lg:m-0">
                         Com o NutriBase, você não precisa complicar sua rotina. Calcule facilmente seu metabolismo
                         basal, descubra
                         sua necessidade diária de proteínas, carboidratos e gorduras, além de manter o controle da sua
@@ -18,9 +18,9 @@
                     </p>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="1000" class="flex justify-center lg:justify-start mb-20 mt-8">
-                    <a href=""
-                        class="bg-lime-400 text-neutral-700 py-4 px-8 rounded-3xl uppercase font-bold text-xs md:text-base">Explore
+                <div data-aos="fade-up" data-aos-duration="1000" class="flex justify-center mt-8 mb-20 lg:justify-start">
+                    <a href="#calculations"
+                        class="px-8 py-4 text-xs font-bold uppercase bg-lime-400 text-neutral-700 rounded-3xl md:text-base">Explore
                         nossas funcionalidades</a>
                 </div>
             </div>

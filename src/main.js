@@ -9,6 +9,10 @@ import Dialog from 'primevue/dialog';
 import { VuePreloader } from 'vue-preloader';
 import '../node_modules/vue-preloader/dist/style.css'
 import i18n from './i18n';
+import IconField from 'primevue/iconfield';
+import InputIcon from 'primevue/inputicon';
+import InputText from 'primevue/inputtext';
+
 
 const app = createApp(App);
 
@@ -21,6 +25,9 @@ app.use(PrimeVue, {
 app.use(i18n);
 app.component('Button', Button);
 app.component('Dialog', Dialog);
+app.component('IconField', IconField);
+app.component('InputIcon', InputIcon);
+app.component('InputText', InputText);
 app.component('VuePreloader', VuePreloader);
 
 app.mount('#app');

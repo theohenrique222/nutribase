@@ -29,6 +29,11 @@ const router = createRouter({
       name: 'Macro Nutrientes',
       component: () => import('../views/pages/MacroNutrientes.vue')
     },
+    {
+      path: '/login',
+      name: 'Login',
+      component: () => import('../views/pages/autentication/Login.vue')
+    },
   ]
 })
 

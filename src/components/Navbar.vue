@@ -1,7 +1,7 @@
 <template>
-  <nav class="backdrop-blur-sm w-full border-b border-b-neutral-100/20 z-50 fixed top-0">
-    <main class="flex justify-between lg:max-w-6xl md:max-w-3xl sm:max-w-xl max-w-xs m-auto px-2 sm:px-3 lg:py-5 py-3 items-center">
-      <ul class="flex items-center space-x-4 text-neutral-100 font-bold lg:text-3xl text-2xl">
+  <nav class="fixed top-0 z-50 w-full border-b backdrop-blur-sm border-b-neutral-100/20">
+    <main class="flex items-center justify-between max-w-xs px-2 py-3 m-auto lg:max-w-6xl md:max-w-3xl sm:max-w-xl sm:px-3 lg:py-5">
+      <ul class="flex items-center space-x-4 text-2xl font-bold text-neutral-100 lg:text-3xl">
         <li>
           <a href="/">
             Nutribase
@@ -9,22 +9,22 @@
         </li>
       </ul>
 
-      <button @click="toggleMenu" class="lg:hidden flex text-neutral-100 text-3xl">
+      <button @click="toggleMenu" class="flex text-3xl lg:hidden text-neutral-100">
         <ion-icon :name="menuOpen ? 'close' : 'menu'" class="transition-all"></ion-icon>
       </button>
 
-      <ul class="hidden lg:flex items-center space-x-6 text-neutral-100">
+      <ul class="items-center hidden space-x-6 lg:flex text-neutral-100">
         <li v-for="item in items_menu" :key="item.id">
-          <a :href="item.href" class="py-5 transition-all hover:border-b-4 border-neutral-200 text-sm">
+          <a :href="item.href" class="py-5 text-sm transition-all hover:border-b-4 border-neutral-200">
             {{ item.name }}
           </a>
         </li>
       </ul>
       
-      <ul class="hidden lg:flex items-center space-x-6">
+      <ul class="items-center hidden space-x-6 lg:flex">
         <li v-for="social in social_icons" :key="social.id">
           <a :href="social.href"
-            class="flex text-sm p-2 rounded-full bg-neutral-100 text-neutral-900 font-extrabold hover:bg-neutral-700 hover:text-neutral-100 hover:-translate-y-1 transition-all">
+            class="flex p-2 text-sm font-extrabold transition-all rounded-full bg-neutral-100 text-neutral-900 hover:bg-neutral-700 hover:text-neutral-100 hover:-translate-y-1">
             <ion-icon :name="social.name"></ion-icon>
           </a>
         </li>
@@ -32,19 +32,19 @@
     </main>
 
     <div v-if="menuOpen"
-      class="lg:hidden absolute top-16 left-0 w-full bg-neutral-800/80 backdrop-blur-sm p-5 flex flex-col items-center space-y-4 text-neutral-100 transition-all duration-300">
+      class="absolute left-0 flex flex-col items-center w-full p-5 space-y-4 transition-all duration-300 lg:hidden top-16 bg-neutral-800/80 backdrop-blur-sm text-neutral-100">
 
       <ul class="w-full text-center">
-        <li v-for="item in items_menu" :key="item.id" class="border-b border-neutral-500 w-full p-2">
+        <li v-for="item in items_menu" :key="item.id" class="w-full p-2 border-b border-neutral-500">
           <a :href="item.href" class="block py-2 text-lg">{{ item.name }}</a>
         </li>
       </ul>
 
-      <div class="flex space-x-4 p-2">
+      <div class="flex p-2 space-x-4">
         <ul class="flex space-x-4">
           <li v-for="social in social_icons" :key="social.id">
             <a :href="social.href"
-              class="flex text-xl p-2 rounded-full bg-neutral-100 text-neutral-900 font-extrabold hover:bg-neutral-700 hover:text-neutral-100 transition-all">
+              class="flex p-2 text-xl font-extrabold transition-all rounded-full bg-neutral-100 text-neutral-900 hover:bg-neutral-700 hover:text-neutral-100">
               <ion-icon :name="social.name"></ion-icon>
             </a>
           </li>
@@ -78,7 +78,7 @@ export default {
         { 
           id:   4, 
           name: "Contate-me", 
-          href: '/macronutrients' 
+          href: '#formulario' 
         },
       ],
       social_icons: [
