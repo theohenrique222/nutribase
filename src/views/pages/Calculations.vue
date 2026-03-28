@@ -1,19 +1,19 @@
 <template>
     <section id="calculations" class="bg-[url('background3.jpg')] bg-cover w-full lg:h-screen min-h-screen">
         <main
-            class="flex flex-col-reverse lg:flex-row w-full px-2 sm:px-3 lg:max-w-6xl md:max-w-3xl sm:max-w-xl max-w-xs m-auto lg:my-0 my-10 space-x-10">
-            <div class="flex lg:flex-col flex-col-reverse w-full m-auto lg:h-screen text-start">
-                <div class="flex flex-col flex-grow justify-center">
+            class="flex flex-col-reverse w-full max-w-xs px-2 m-auto my-10 space-x-10 lg:flex-row sm:px-3 lg:max-w-6xl md:max-w-3xl sm:max-w-xl lg:my-0">
+            <div class="flex flex-col-reverse w-full m-auto lg:flex-col lg:h-screen text-start">
+                <div class="flex flex-col justify-center flex-grow">
                     <h2 data-aos="fade-up" data-aos-duration="700"
-                        class="uppercase text-lime-400 font-extrabold text-3xl md:text-4xl lg:text-4xl py-4">
+                        class="py-4 text-3xl font-extrabold uppercase text-lime-400 md:text-4xl lg:text-4xl">
                         Otimize sua Saúde com Cálculos <span class="text-neutral-200"> Personalizados</span>
                     </h2>
                     <h3 data-aos="fade-up" data-aos-duration="1000"
-                        class="uppercase text-lime-400 font-medium text-base md:text-lg py-3">
+                        class="py-3 text-base font-medium uppercase text-lime-400 md:text-lg">
                         Descubra os números ideais para sua alimentação e bem-estar!
                     </h3>
                     <p data-aos="fade-up" data-aos-duration="1000"
-                        class="text-neutral-100 font-extralight text-base md:text-lg">
+                        class="text-base text-neutral-100 font-extralight md:text-lg">
                         Cada organismo tem necessidades específicas. Com nossos cálculos personalizados, você saberá
                         exatamente quantas calorias consumir, como dividir seus macronutrientes, a quantidade ideal de
                         água por dia e sua porcentagem de gordura corporal. Faça escolhas mais inteligentes para
@@ -21,42 +21,50 @@
                     </p>
 
                     <div data-aos="fade-up" data-aos-duration="1000"
-                        class="lg:flex lg:flex-row flex-col lg:py-0 py-2 text-center w-full mt-10 border-2 border-lime-500">
+                        class="flex-col w-full py-2 mt-10 text-center border-2 lg:flex lg:flex-row lg:py-0 border-lime-500">
                         <template v-for="(item, index) in links" :key="item.id">
                             <div @click="openDialog(item)"
-                                class="w-full p-3 hover:bg-lime-500/30 cursor-pointer transition-all">
-                                <h3 class="lg:text-sm text-base text-lime-500">
+                                class="w-full p-3 transition-all cursor-pointer hover:bg-lime-500/30">
+                                <h3 class="text-base lg:text-sm text-lime-500">
                                     {{ item.title }}
                                 </h3>
-                                <h3 class="text-white text-sm font-extralight">
+                                <h3 class="text-sm text-white font-extralight">
                                     {{ item.button }}
                                 </h3>
                             </div>
                             <div v-if="index < links.length - 1"
-                                class="bg-neutral-100 m-auto w-2/3 h-px lg:w-px lg:h-2/3"></div>
+                                class="w-2/3 h-px m-auto bg-neutral-100 lg:w-px lg:h-2/3"></div>
                         </template>
                     </div>
                 </div>
             </div>
-            <div class="w-full max-w-md overflow-hidden flex justify-center"></div>
+            <div class="flex justify-center w-full max-w-md overflow-hidden"></div>
         </main>
     </section>
 
-    <Dialog v-model:visible="visible" modal :header="selectedItem?.title || 'Detalhes'" :style="{ width: '25rem' }">
-        <span class="text-surface-500 dark:text-surface-400 block mb-8">
-            O que é <strong>{{ selectedItem?.title }}</strong>?
-        </span>
-        <p class="text-sm text-neutral-200">{{ selectedItem?.description || "Sem descrição disponível." }}</p>
-        <div class="flex justify-end gap-2 mt-4">
-            <Button type="button" label="Fechar" severity="secondary" @click="visible = false"></Button>
-            <Button type="button" label="Acessar" @click="goToPage(selectedItem.href)"></Button>
-        </div>
+    <Dialog v-model:visible="visible" modal :style="{ width: '25rem' }" :header="selectedItem?.title">
+
+        <component :is="selectedItem?.component" @go-dashboard="goToDashboard" />
+
     </Dialog>
+
 </template>
 
 <script>
+import BasalCalc from '@/components/calculations/BasalCalc.vue';
+import BodyFatCalc from '@/components/calculations/BodyFatCalc.vue';
+import MacroCalc from '@/components/calculations/MacroCalc.vue';
+import WaterCalc from '@/components/calculations/WaterCalc.vue';
+
+
 export default {
     name: "Calculations",
+    components: {
+        BasalCalc,
+        BodyFatCalc,
+        MacroCalc,
+        WaterCalc
+    },
     data() {
         return {
             visible: false,
@@ -66,6 +74,7 @@ export default {
                     id: 1,
                     title: "Metabolismo Basal",
                     button: "Calcule agora!",
+                    component: 'BasalCalc',
                     href: "/basal_metabolism",
                     description: "O metabolismo basal (MB) é a energia mínima que seu corpo precisa para manter funções vitais em repouso."
                 },
@@ -73,6 +82,7 @@ export default {
                     id: 2,
                     title: "Gordura corporal",
                     button: "Calcule agora!",
+                    component: "BodyFatCalc",
                     href: "/bodyfat",
                     description: "A gordura corporal aproximada é a porcentagem de gordura no corpo em relação ao peso total, estimada com base em peso, altura, idade e sexo."
                 },
@@ -80,6 +90,7 @@ export default {
                     id: 3,
                     title: "Macronutrientes",
                     button: "Calcule agora!",
+                    component: "MacroCalc",
                     href: "/macronutrients",
                     description: "O cálculo de macronutrientes determina a quantidade ideal de proteínas, carboidratos e gorduras que você deve consumir diariamente, de acordo com seu peso, nível de atividade e objetivo."
                 },
@@ -87,6 +98,7 @@ export default {
                     id: 4,
                     title: "Água diária",
                     button: "Calcule agora!",
+                    component: 'WaterCalc',
                     href: "/water_intake",
                     description: "Descubra a quantidade ideal de água para consumir diariamente."
                 }
@@ -98,11 +110,10 @@ export default {
             this.selectedItem = item;
             this.visible = true;
         },
-        goToPage(url) {
-            if (url) {
-                window.location.href = url;
-            }
-        }
+        
+        goToDashboard() {
+      window.location.href = "/dashboard";
+    }
     }
 };
 </script>

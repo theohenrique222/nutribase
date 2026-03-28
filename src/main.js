@@ -8,17 +8,34 @@ import Button from "primevue/button"
 import Dialog from 'primevue/dialog';
 import { VuePreloader } from 'vue-preloader';
 import '../node_modules/vue-preloader/dist/style.css'
+import i18n from './i18n';
+import IconField from 'primevue/iconfield';
+import InputIcon from 'primevue/inputicon';
+import InputText from 'primevue/inputtext';
+import InputNumber from 'primevue/inputnumber';
+import Dropdown from 'primevue/dropdown';
+import { DropdownStyle } from 'primevue';
+
+
+
 
 const app = createApp(App);
 
 app.use(router);
 app.use(PrimeVue, {
     theme: {
-        preset: Aura
+        preset: Aura,
     }
 });
+app.use(i18n);
 app.component('Button', Button);
 app.component('Dialog', Dialog);
+app.component('IconField', IconField);
+app.component('InputIcon', InputIcon);
+app.component('InputText', InputText);
 app.component('VuePreloader', VuePreloader);
+app.component('InputNumber', InputNumber);
+app.component('Dropdown', Dropdown);
+app.component('DropdownStyle', DropdownStyle)
 
 app.mount('#app');
