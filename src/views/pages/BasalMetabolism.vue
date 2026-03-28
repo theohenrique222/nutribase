@@ -1,41 +1,41 @@
 <template>
   <section class="lg:bg-[url('/background2.png')] min-h-screen">
     <div class="h-16"></div>
-    <div class="container mx-auto p-6">
-      <header class="bg-gradient-to-r from-blue-500 to-sky-800 text-white text-center p-6 rounded-lg shadow-md mb-6">
-        <h1 class="lg:text-2xl text-xl font-bold uppercase">
+    <div class="container p-6 mx-auto">
+      <header class="p-6 mb-6 text-center text-white rounded-lg shadow-md bg-gradient-to-r from-blue-500 to-sky-800">
+        <h1 class="text-xl font-bold uppercase lg:text-2xl">
           Calculadora de Metabolismo Basal
         </h1>
-        <p class="lg:text-lg text-base font-light mt-2">
+        <p class="mt-2 text-base font-light lg:text-lg">
           Insira suas informações para calcular seu metabolismo basal, a quantidade recomendada de água e proteínas.
         </p>
       </header>
 
-      <main class="bg-gray-100/20 backdrop-blur-sm p-6 rounded-lg shadow-2xl mb-6">
+      <main class="p-6 mb-6 rounded-lg shadow-2xl bg-gray-100/20 backdrop-blur-sm">
         <form @submit.prevent="calcular" class="space-y-6">
           <div class="form-group">
-            <label for="peso" class="block font-bold mb-2">
+            <label for="peso" class="block mb-2 font-bold">
               Peso (kg):
             </label>
             <input type="number" id="peso" v-model="weight" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
 
           <div class="form-group">
-            <label for="altura" class="block font-bold mb-2">
+            <label for="altura" class="block mb-2 font-bold">
               Altura (cm):
             </label>
             <input type="number" id="altura" v-model="height" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
 
           <div class="form-group">
-            <label for="idade" class="block font-bold mb-2">
+            <label for="idade" class="block mb-2 font-bold">
               Idade:
             </label>
             <input type="number" id="idade" v-model="age" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
 
           <div class="form-group">
-            <label for="genero" class="block font-bold mb-2">
+            <label for="genero" class="block mb-2 font-bold">
               Gênero:
             </label>
             <select id="genero" v-model="gender" required
@@ -46,18 +46,14 @@
             </select>
           </div>
 
-          <button type="submit" class="bg-gradient-to-r from-blue-500 to-sky-800 text-white py-4 w-full uppercase rounded-sm transition duration-300 ease-in-out hover:from-blue-600 hover:to-blue-700">Calcular</button>
+          <button type="submit" class="w-full py-4 text-white uppercase transition duration-300 ease-in-out rounded-sm bg-gradient-to-r from-blue-500 to-sky-800 hover:from-blue-600 hover:to-blue-700">Calcular</button>
         </form>
 
-        <div v-if="resultado" class="bg-sky-700 p-6 rounded-lg shadow-lg mt-6 text-center">
-          <h2 class="text-2xl font-bold mb-4">Resultado</h2>
+        <div v-if="resultado" class="p-6 mt-6 text-center rounded-lg shadow-lg bg-sky-700">
+          <h2 class="mb-4 text-2xl font-bold">Resultado</h2>
           <p class="text-lg">
             Seu metabolismo basal é: <br>
             <strong class="font-semibold underline">{{ resultado.calorias }} calorias</strong> por dia.
-          </p>
-          <p class="text-lg">
-            A quantidade recomendada de proteínas é: <br>
-            <strong class="font-semibold underline">{{ resultado.proteinas }} gramas</strong> por dia.
           </p>
         </div>
       </main>
@@ -100,12 +96,10 @@ export default {
       {
           calorias    = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
       }
-      let proteinas   = weight * 0.8;
 
       this.resultado  = 
       {
           calorias:   calorias. toFixed(2),
-          proteinas:  proteinas.toFixed(2),
       };
     },
   },

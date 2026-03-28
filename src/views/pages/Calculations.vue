@@ -42,21 +42,29 @@
         </main>
     </section>
 
-    <Dialog v-model:visible="visible" modal :header="selectedItem?.title || 'Detalhes'" :style="{ width: '25rem' }">
-        <span class="block mb-8 text-surface-500 dark:text-surface-400">
-            O que é <strong>{{ selectedItem?.title }}</strong>?
-        </span>
-        <p class="text-sm">{{ selectedItem?.description || "Sem descrição disponível." }}</p>
-        <div class="flex justify-end gap-2 mt-4">
-            <Button type="button" label="Fechar" severity="secondary" @click="visible = false"></Button>
-            <Button type="button" label="Acessar" @click="goToPage(selectedItem.href)"></Button>
-        </div>
+    <Dialog v-model:visible="visible" modal :style="{ width: '25rem' }" :header="selectedItem?.title">
+
+        <component :is="selectedItem?.component" @go-dashboard="goToDashboard" />
+
     </Dialog>
+
 </template>
 
 <script>
+import BasalCalc from '@/components/calculations/BasalCalc.vue';
+import BodyFatCalc from '@/components/calculations/BodyFatCalc.vue';
+import MacroCalc from '@/components/calculations/MacroCalc.vue';
+import WaterCalc from '@/components/calculations/WaterCalc.vue';
+
+
 export default {
     name: "Calculations",
+    components: {
+        BasalCalc,
+        BodyFatCalc,
+        MacroCalc,
+        WaterCalc
+    },
     data() {
         return {
             visible: false,
@@ -66,6 +74,7 @@ export default {
                     id: 1,
                     title: "Metabolismo Basal",
                     button: "Calcule agora!",
+                    component: 'BasalCalc',
                     href: "/basal_metabolism",
                     description: "O metabolismo basal (MB) é a energia mínima que seu corpo precisa para manter funções vitais em repouso."
                 },
@@ -73,6 +82,7 @@ export default {
                     id: 2,
                     title: "Gordura corporal",
                     button: "Calcule agora!",
+                    component: "BodyFatCalc",
                     href: "/bodyfat",
                     description: "A gordura corporal aproximada é a porcentagem de gordura no corpo em relação ao peso total, estimada com base em peso, altura, idade e sexo."
                 },
@@ -80,6 +90,7 @@ export default {
                     id: 3,
                     title: "Macronutrientes",
                     button: "Calcule agora!",
+                    component: "MacroCalc",
                     href: "/macronutrients",
                     description: "O cálculo de macronutrientes determina a quantidade ideal de proteínas, carboidratos e gorduras que você deve consumir diariamente, de acordo com seu peso, nível de atividade e objetivo."
                 },
@@ -87,6 +98,7 @@ export default {
                     id: 4,
                     title: "Água diária",
                     button: "Calcule agora!",
+                    component: 'WaterCalc',
                     href: "/water_intake",
                     description: "Descubra a quantidade ideal de água para consumir diariamente."
                 }
@@ -98,11 +110,10 @@ export default {
             this.selectedItem = item;
             this.visible = true;
         },
-        goToPage(url) {
-            if (url) {
-                window.location.href = url;
-            }
-        }
+        
+        goToDashboard() {
+      window.location.href = "/dashboard";
+    }
     }
 };
 </script>
