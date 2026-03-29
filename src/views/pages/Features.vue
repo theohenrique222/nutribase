@@ -20,8 +20,9 @@
 
                 <div data-aos="fade-up" data-aos-duration="1000" class="flex justify-center mt-8 mb-20 lg:justify-start">
                     <a href="#calculations"
-                        class="px-8 py-4 text-xs font-bold uppercase bg-lime-400 text-neutral-700 rounded-3xl md:text-base">Explore
-                        nossas funcionalidades</a>
+                        class="px-8 py-4 text-xs font-bold uppercase transition hover: bg-lime-400 text-neutral-50 rounded-3xl md:text-base hover:-translate-y-2 hover:shadow-lg hover:shadow-lime-400/50">
+                        Explore nossas funcionalidades
+                    </a>
                 </div>
             </div>
             <div class="flex w-full h-0 lg:h-screen"></div>

@@ -17,7 +17,7 @@
         <FormField v-if="gender === 'feminino'" label="Quadril (cm)" v-model="hip" type="number" />
 
         <!-- BOTÃO -->
-        <Button label="Calcular" class="w-full" @click="calcular" />
+        <Button label="Calcular" severity="success" class="w-full" @click="calcular" />
 
         <!-- RESULTADO -->
         <div v-if="resultado" class="result">
@@ -25,7 +25,7 @@
         </div>
 
         <!-- CTA -->
-        <Button v-if="resultado" label="Testar versão completa" class="w-full" severity="info"
+        <Button v-if="resultado" label="Testar versão completa" class="w-full" severity="warn"
             @click="$emit('go-dashboard')" />
 
     </div>

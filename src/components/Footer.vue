@@ -1,10 +1,10 @@
 <template>
-  <footer class="flex flex-col items-center bg-zinc-50 text-center text-surface dark:bg-neutral-700 dark:text-white">
+  <footer class="flex flex-col items-center text-center bg-zinc-50 text-surface dark:bg-neutral-700 dark:text-white">
     <div class="container pt-9">
-      <!-- Social media icons container -->
-      <div class="mb-6 flex justify-center space-x-2">
+
+      <div class="flex justify-center mb-6 space-x-2">
         <a href="#!" type="button"
-          class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+          class="p-3 font-medium leading-normal uppercase transition duration-150 ease-in-out bg-transparent rounded-full text-surface hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
           >
           <span class="[&>svg]:h-5 [&>svg]:w-5">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
@@ -15,7 +15,7 @@
         </a>
 
         <a href="#!" type="button"
-          class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+          class="p-3 font-medium leading-normal uppercase transition duration-150 ease-in-out bg-transparent rounded-full text-surface hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
           data-twe-ripple-init>
           <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
@@ -27,7 +27,7 @@
         </a>
 
         <a href="#!" type="button"
-          class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+          class="p-3 font-medium leading-normal uppercase transition duration-150 ease-in-out bg-transparent rounded-full text-surface hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
           data-twe-ripple-init>
           <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
@@ -39,9 +39,8 @@
       </div>
     </div>
 
-    <!--Copyright section-->
-    <div class="w-full bg-black/5 p-4 text-center">
-      © 2025 Copyright:
+    <div class="w-full p-4 text-center bg-black/5">
+      © 2026 Todos os direitos reservados.
       <a href="https://tw-elements.com/">NUTRIBASE</a>
     </div>
   </footer>
@@ -52,5 +51,3 @@ export default {
 
 }
 </script>
-
-<style></style>

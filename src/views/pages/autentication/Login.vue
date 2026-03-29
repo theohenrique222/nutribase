@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full min-h-screen">
+    <div class="w-full min-h-screen bg-gradient-to-br dark:from-neutral-950 via-background dark:to-neutral-800">
         <div class="flex justify-center p-6 md:p-10 lg:items-center lg:pt-10">
             <div class="w-full max-w-md space-y-6 sm:space-y-8">
                 <div class="flex justify-center lg:hidden">
