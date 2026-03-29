@@ -6,7 +6,7 @@
 
         <FormField label="Gênero" v-model="gender" type="select" :options="genderOptions" />
 
-        <Button label="Calcular" class="w-full" @click="calcular" />
+        <Button label="Calcular" class="w-full" severity="contrast" @click="calcular" />
 
         <div v-if="resultado" class="result">
             {{ resultado }} kcal/dia

@@ -1,16 +1,8 @@
 <script setup>
-import Navbar from "../components/Navbar.vue";
-import Footer from "../components/Footer.vue";
-import Hero from "./pages/Hero.vue";
-import Features from "./pages/Features.vue";
-import Contact from "./pages/Contact.vue";
-import Calculations from "./pages/Calculations.vue";
-import Calculate from "./pages/Calculate.vue";
 
 </script>
 <template>
   <div>
-    <Navbar/>
     <div>
       <VuePreloader 
         background-color="#232425" 
@@ -24,13 +16,10 @@ import Calculate from "./pages/Calculate.vue";
     </div>
 
     <router-view />
-    <Hero/>
-    <Features/>
-    <Calculations/>
-    <Contact/>
-    <Footer/>
-    <!-- <TemplatesPage>
+    
+    <TemplatesPage>
       <slot />
-    </TemplatesPage> -->
+    </TemplatesPage>
+    
   </div>
 </template>

@@ -1,39 +1,50 @@
-import Index from '@/views/Index.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+
   routes: [
-    // {
-    //   path: "/",
-    //   name: 'index',
-    //   component: () => import('../views/Index.vue')
-    // },
+    // 🌐 LANDING
     {
-      path: '/basal_metabolism',
-      name: 'Metabolismo Basal',
-      component: () => import('../views/pages/BasalMetabolism.vue')
+      path: '/',
+      component: () => import('@/layouts/MainLoyout.vue'),
+      children: [
+        {
+          path: '',
+          name: 'index',
+          component: () => import('@/views/Index.vue')
+        },
+        {
+          path: 'basal_metabolism',
+          component: () => import('../views/pages/BasalMetabolism.vue')
+        },
+        {
+          path: 'bodyfat',
+          component: () => import('../views/pages/BodyFat.vue')
+        },
+        {
+          path: 'water_intake',
+          component: () => import('../views/pages/WaterIntake.vue')
+        },
+        {
+          path: 'macronutrients',
+          component: () => import('../views/pages/MacroNutrientes.vue')
+        }
+      ]
     },
+
+    // 🔐 AUTH (login separado)
     {
-      path: '/bodyfat',
-      name: 'Body Fat',
-      component: () => import('../views/pages/BodyFat.vue')
-    },
-    {
-      path: '/water_intake',
-      name: 'Water Intake',
-      component: () => import('../views/pages/WaterIntake.vue')
-    },
-    {
-      path: '/macronutrients',
-      name: 'Macro Nutrientes',
-      component: () => import('../views/pages/MacroNutrientes.vue')
-    },
-    {
-      path: '/login',
-      name: 'Login',
-      component: () => import('../views/pages/autentication/Login.vue')
-    },
+      path: '/',
+      component: () => import('@/layouts/AuthLayout.vue'),
+      children: [
+        {
+          path: 'login', // 👈 SEM /
+          name: 'Login',
+          component: () => import('../views/pages/autentication/Login.vue')
+        }
+      ]
+    }
   ]
 })
 

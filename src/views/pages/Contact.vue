@@ -1,11 +1,11 @@
 <template>
     <section id="formulario"
-        class="relative py-16 overflow-hidden bg-gradient-to-br from-neutral-800 via-background to-neutral-900/40 sm:py-20 md:py-24 lg:py-32">
+        class="relative py-16 overflow-hidden bg-gradient-to-br from-neutral-950 via-background to-neutral-700/40 sm:py-20 md:py-24 lg:py-32">
         
         <div class="container relative px-4 mx-auto sm:px-6">
             <div class="max-w-2xl mx-auto mb-10 text-center sm:mb-12 md:mb-16">
                 <div data-slot="badge"
-                    class="justify-center w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden [a&amp;]:hover:bg-primary/90 mb-6 inline-flex items-center gap-1.5 rounded-full border border-brand-border bg-lime-500 px-4 py-1.5 text-xs font-semibold text-white shadow-sm sm:mb-8 sm:gap-2 sm:px-5 sm:py-2 sm:text-sm">
+                    class="justify-center w-fit mb-6 inline-flex items-center gap-1.5 rounded-full bg-amber-500/20 border-2 border-amber-500 px-4 py-1.5 text-xs font-semibold text-amber-500 shadow-sm sm:mb-8 sm:gap-2 sm:px-5 sm:py-2 sm:text-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-sparkles-icon sm:h-4 sm:w-4">
@@ -22,17 +22,17 @@
                     </span>
                 </div>
                 <h2
-                    class="px-2 mb-4 text-3xl font-black tracking-tight text-white sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
+                    class="px-2 mb-4 text-3xl font-black tracking-tight text-white sm:mb-6 sm:text-4xl md:text-5xl lg:text-5xl">
                     Comece sua evolução hoje 
                 </h2>
                 <p
-                    class="px-2 text-base font-medium leading-relaxed text-white sm:text-lg md:text-xl lg:text-2xl">
+                    class="px-2 text-base font-medium leading-relaxed text-white sm:text-lg md:text-xl lg:text-xl">
                     Veja o NutriBase funcionando na sua rotina. Sem compromisso.
                 </p>
             </div>
             <div class="relative z-10 max-w-2xl mx-auto">
                 <div
-                    class="overflow-hidden rounded-3xl border border-border bg-card shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-700 hover:border-brand-border hover:shadow-lime-500/50 dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                    class="overflow-hidden rounded-3xl border border-border bg-lime-500 transition-all duration-700 hover:border-brand-border hover:shadow-lime-500/50 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                     <div
                         class="relative px-6 py-8 overflow-hidden text-center bg-gradient-to-r from-lime-500 via-lime-600 to-lime-500/50 sm:px-8 sm:py-10 md:px-10 md:py-12">
                         <div class="absolute inset-0 animate-pulse bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.15)_1px,transparent_1px)] [background-size:20px_20px]"
@@ -42,14 +42,15 @@
                         </div>
                         <div class="relative">
                             <h3
-                                class="mb-2 text-2xl font-black tracking-tight text-white drop-shadow-lg sm:mb-3 sm:text-3xl md:text-4xl">
-                                Comece Agora</h3>
+                                class="mb-2 text-2xl font-black tracking-tight text-white drop-shadow-lg sm:mb-3 sm:text-3xl md:text-4xl lg:text-5xl">
+                                Comece Agora
+                            </h3>
                             <p
                                 class="max-w-md px-2 mx-auto text-sm font-semibold leading-relaxed text-lime-50 sm:text-base md:text-lg">
                                 Veja o Praisefy em ação na sua realidade. Sem compromisso.</p>
                         </div>
                     </div>
-                    <div class="p-8 bg-neutral-900 sm:p-10 md:p-12 lg:p-16">
+                    <div class="p-8 bg-gray-800 sm:p-10 md:p-12 lg:p-16">
                         <form class="space-y-6 sm:space-y-8 md:space-y-10">
                             <div class="space-y-2 sm:space-y-3">
                                 <label for="name" data-slot="label"
@@ -68,7 +69,7 @@
                                 </label>
                                 <input data-slot="input"
                                     class="file:text-white placeholder:text-muted-white selection:bg-primary selection:text-primary-white dark:bg-input/30 flex w-full min-w-0 border px-3 py-1 shadow-xs outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-12 rounded-xl border-input bg-white text-sm text-black transition-all focus:border-brand focus:ring-2 focus:ring-brand/20 sm:h-14 sm:text-base"
-                                    id="email" type="email" placeholder="joao@igrejarenascer.com.br" required=""><!---->
+                                    id="email" type="email" placeholder="joao@email.com.br" required="">
                             </div>
                             <div class="space-y-2 sm:space-y-3">
                                 <label for="phone" data-slot="label"
@@ -147,10 +148,6 @@
     </section>
 </template>
 <script setup>
-import Button from 'primevue/button';
-import Checkbox from 'primevue/checkbox';
-import InputText from 'primevue/inputtext';
-import Password from 'primevue/password';
 
 import { ref } from 'vue';
 
