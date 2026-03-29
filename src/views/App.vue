@@ -10,7 +10,7 @@ import Calculate from "./pages/Calculate.vue";
 </script>
 <template>
   <div>
-    <Navbar/>
+    <!-- <Navbar/> -->
     <div>
       <VuePreloader 
         background-color="#232425" 
@@ -24,13 +24,13 @@ import Calculate from "./pages/Calculate.vue";
     </div>
 
     <router-view />
-    <Hero/>
+    <!-- <Hero/>
     <Features/>
     <Calculations/>
-    <Contact/>
-    <Footer/>
-    <!-- <TemplatesPage>
+    <Contact/> -->
+    <TemplatesPage>
       <slot />
-    </TemplatesPage> -->
+    </TemplatesPage>
+    <!-- <Footer/> -->
   </div>
 </template>
