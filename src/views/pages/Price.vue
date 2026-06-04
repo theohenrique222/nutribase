@@ -1,261 +1,119 @@
 <template>
-    <section id="pricing" class="py-16 bg-gradient-to-b from-neutral-800 to-neutral-950 sm:py-24">
-        <div class="container px-4 mx-auto sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center">
-                <div data-slot="badge"
-                    class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap mb-4 border-amber-500 bg-amber-500/20 text-amber-500"
-                    variant="outline">
-                    PLANOS ACESSÍVEIS
-                </div>
+    <section id="pricing" class="relative py-16 overflow-hidden bg-neutral-950 sm:py-24">
+        <div class="absolute inset-0 bg-gradient-to-b from-neutral-900 via-neutral-950 to-neutral-950"></div>
+        <div class="absolute top-0 left-1/2 w-[800px] h-[800px] bg-lime-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+
+        <div class="container relative px-4 mx-auto sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
+                <p class="inline-flex items-center gap-2 px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase border rounded-full text-lime-400 border-lime-500/30 bg-lime-500/10">
+                    Planos Acessíveis
+                </p>
                 <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
-                    Preços justos para sua realidade.
+                    Preços justos para sua <span class="bg-gradient-to-r from-lime-400 to-emerald-400 bg-clip-text text-transparent">realidade</span>.
                 </h2>
                 <p class="max-w-2xl mx-auto mt-4 text-lg text-neutral-400">
-                    Sem taxas ocultas. Escolha o plano ideal e <span class="font-bold text-white">comece gratuitamente
-                        com acesso ás princeipais funcionalidades</span>. Cresça com a gente, sem surpresas no caminho.
+                    Sem taxas ocultas. Escolha o plano ideal e <span class="font-semibold text-white">comece gratuitamente com acesso às principais funcionalidades</span>.
                 </p>
             </div>
-            <div class="grid grid-cols-1 gap-8 mx-auto mt-16 max-w-7xl md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-                <div data-slot="card"
-                    class="text-card-foreground gap-6 border py-6 relative flex flex-col justify-between overflow-hidden rounded-3xl bg-gray-800 backdrop-blur-xl transition-all duration-500 border-slate-200/60 shadow-[0_10px_30px_-10px_rgba(15,23,42,0.05)] hover:border-slate-300/80 hover:shadow-[0_20px_40px_-15px_rgba(15,23,42,0.08)] dark:border-slate-700/60 dark:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] dark:hover:border-slate-600/80">
 
-                    <div data-slot="card-header"
-                        class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
-                        <h3 data-slot="card-title" class="text-2xl font-black text-white">
-                            Plano Start
-                        </h3>
-                        <p data-slot="card-description" class="mt-2 text-sm text-white">
-                            <span class="font-bold text-white">
-                                Até 5 usuários
-                            </span>
-                            <span class="block text-white/50">
-                                Ideal para começar
-                            </span>
-                        </p>
-                        <div class="flex items-baseline mt-6 gap-x-2">
-                            <span class="text-4xl font-black tracking-tight text-white">
-                                <span class="text-2xl">
-                                    R$</span> 0,00
-                            </span>
-                            <span class="text-sm font-semibold leading-6 text-white/50">
-                                /mês
-                            </span>
-                        </div>
-                    </div>
-                    <div data-slot="card-content" class="flex-grow px-6">
-                        <ul role="list" class="mt-4 space-y-3 text-sm leading-6 text-white/50">
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Cálculo de metabolismo basal
-                            </li>
+            <div class="grid grid-cols-1 gap-6 mx-auto mt-16 max-w-7xl md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+                <div v-for="(plan, index) in plans" :key="index"
+                    :class="[
+                        'relative flex flex-col justify-between p-8 transition-all duration-500 rounded-3xl',
+                        plan.popular
+                            ? 'bg-gradient-to-b from-neutral-800 to-neutral-900 border-2 border-lime-500 shadow-xl shadow-lime-500/10 scale-100 lg:scale-105'
+                            : 'bg-neutral-900/80 border border-neutral-800 hover:border-neutral-700'
+                    ]"
+                    data-aos="fade-up" data-aos-duration="800" :data-aos-delay="index * 200">
 
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Cálculo de macronutrientes
-                            </li>
-
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Consumo diário de água
-                            </li>
-
-
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Percentual de gordura corporal
-                            </li>
-
-
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Acesso à dashboard teste
-                            </li>
-
-                        </ul>
-                    </div>
-                    <div data-slot="card-footer" class="flex items-center px-6 [.border-t]:pt-6 pt-6 pb-8">
-                        <button data-slot="button"
-                            class="inline-flex items-center justify-center w-full gap-2 px-4 py-2 text-sm font-bold text-white transition-all bg-gray-800 border hover:shadow-md hover:-translate-y-2 shadow-lime-500 h-11 rounded-2xl">
-                            Criar conta grátis
-                        </button>
-                    </div>
-                </div>
-
-                <div
-                    class="relative flex flex-col justify-between p-6 transition-all duration-300 scale-105 bg-gray-800 border-2 shadow-xl border-lime-500 rounded-2xl">
-
-                    <span
-                        class="absolute px-3 py-1 text-xs font-bold text-white -translate-x-1/2 rounded-full bg-lime-500 -top-3 left-1/2">
+                    <span v-if="plan.popular"
+                        class="absolute px-4 py-1.5 text-xs font-bold text-neutral-950 -translate-x-1/2 rounded-full bg-gradient-to-r from-lime-400 to-emerald-400 -top-3 left-1/2">
                         MAIS POPULAR
                     </span>
 
                     <div>
-                        <h3 class="text-2xl font-bold text-white">Plano Pro</h3>
+                        <h3 class="text-2xl font-bold text-white">{{ plan.name }}</h3>
+                        <p class="mt-2 text-sm text-neutral-400">{{ plan.subtitle }}</p>
 
-                        <p class="mt-2 text-sm text-neutral-400">
-                            Para quem quer evolução completa
-                        </p>
-
-                        <div class="mt-6">
-                            <span class="text-4xl font-black text-white">R$ 29,90</span>
-                            <span class="text-sm text-neutral-400">/mês</span>
-                        </div>
-
-                        <ul class="mt-6 space-y-3 text-sm text-neutral-300">
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Tudo do plano gratuito
-                            </li>
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Histórico de dados
-                            </li>
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Recomendações inteligentes
-                            </li>
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Dashboard completa
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div data-slot="card-footer" class="flex items-center px-6 [.border-t]:pt-6 pt-6 pb-8">
-                        <button data-slot="button"
-                            class="inline-flex items-center justify-center w-full gap-2 px-4 py-2 text-sm font-bold text-white transition-all border hover:shadow-md bg-lime-500 hover:-translate-y-2 shadow-lime-500 h-11 rounded-2xl">
-                            Começar agora
-                        </button>
-                    </div>
-                </div>
-
-
-                
-
-                <div data-slot="card"
-                    class="text-card-foreground gap-6 border py-6 relative flex flex-col justify-between overflow-hidden rounded-3xl bg-gray-800 backdrop-blur-xl transition-all duration-500 border-slate-200/60 shadow-[0_10px_30px_-10px_rgba(15,23,42,0.05)] hover:border-slate-300/80 hover:shadow-[0_20px_40px_-15px_rgba(15,23,42,0.08)] dark:border-slate-700/60 dark:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] dark:hover:border-slate-600/80">
-
-                    <div data-slot="card-header"
-                        class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6">
-                        <h3 data-slot="card-title" class="text-2xl font-black text-white">
-                            Plano Start
-                        </h3>
-                        <p data-slot="card-description" class="mt-2 text-sm text-white">
-                            <span class="font-bold text-white">
-                                Até 5 usuários
-                            </span>
-                            <span class="block text-white/50">
-                                Ideal para começar
-                            </span>
-                        </p>
                         <div class="flex items-baseline mt-6 gap-x-2">
                             <span class="text-4xl font-black tracking-tight text-white">
-                                <span class="text-2xl">
-                                    R$</span> 59,90
+                                <span class="text-2xl">R$</span> {{ plan.price }}
                             </span>
-                            <span class="text-sm font-semibold leading-6 text-white/50">
-                                /mês
-                            </span>
+                            <span class="text-sm font-semibold text-neutral-500">/mês</span>
                         </div>
-                    </div>
-                    <div data-slot="card-content" class="flex-grow px-6">
-                        <ul role="list" class="mt-4 space-y-3 text-sm leading-6 text-white/50">
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
+
+                        <ul class="mt-8 space-y-4">
+                            <li v-for="(feature, fIndex) in plan.features" :key="fIndex" class="flex items-start gap-3 text-sm text-neutral-300">
+                                <svg class="flex-none w-5 h-5 mt-0.5 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
                                 </svg>
-                                Tudo do plano Pro
+                                {{ feature }}
                             </li>
-
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Planos alimentares
-                            </li>
-
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Insights avançados
-                            </li>
-
-
-                            <li class="flex gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="flex-none w-5 h-5 lucide lucide-check-icon text-lime-500" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5"></path>
-                                </svg>
-                                Suporte prioritário
-                            </li>
-
-
                         </ul>
                     </div>
-                    <div data-slot="card-footer" class="flex items-center px-6 [.border-t]:pt-6 pt-6 pb-8">
-                        <button data-slot="button"
-                            class="inline-flex items-center justify-center w-full gap-2 px-4 py-2 text-sm font-bold text-white transition-all bg-gray-800 border hover:shadow-md hover:-translate-y-2 shadow-lime-500 h-11 rounded-2xl">
-                            Começar agora
-                        </button>
-                    </div>
-                </div>
 
+                    <button
+                        :class="[
+                            'inline-flex items-center justify-center w-full gap-2 px-4 py-3 mt-8 text-sm font-bold transition-all rounded-xl h-12',
+                            plan.popular
+                                ? 'bg-gradient-to-r from-lime-400 to-emerald-500 text-neutral-950 hover:from-lime-500 hover:to-emerald-600 hover:shadow-lg hover:shadow-lime-500/25 hover:-translate-y-0.5'
+                                : 'bg-neutral-800 text-white border border-neutral-700 hover:border-lime-500/50 hover:bg-neutral-700'
+                        ]">
+                        {{ plan.cta }}
+                    </button>
+                </div>
             </div>
-            
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            plans: [
+                {
+                    name: "Plano Start",
+                    subtitle: "Ideal para começar",
+                    price: "0,00",
+                    popular: false,
+                    cta: "Criar conta grátis",
+                    features: [
+                        "Cálculo de metabolismo basal",
+                        "Cálculo de macronutrientes",
+                        "Consumo diário de água",
+                        "Percentual de gordura corporal",
+                        "Acesso à dashboard teste"
+                    ]
+                },
+                {
+                    name: "Plano Pro",
+                    subtitle: "Para quem quer evolução completa",
+                    price: "29,90",
+                    popular: true,
+                    cta: "Começar agora",
+                    features: [
+                        "Tudo do plano gratuito",
+                        "Histórico de dados",
+                        "Recomendações inteligentes",
+                        "Dashboard completa"
+                    ]
+                },
+                {
+                    name: "Plano Enterprise",
+                    subtitle: "Para profissionais e equipes",
+                    price: "59,90",
+                    popular: false,
+                    cta: "Começar agora",
+                    features: [
+                        "Tudo do plano Pro",
+                        "Planos alimentares",
+                        "Insights avançados",
+                        "Suporte prioritário"
+                    ]
+                }
+            ]
+        }
+    }
+}
+</script>
