@@ -37,7 +37,16 @@
             </div>
         </main>
 
-        <Dialog v-model:visible="visible" modal :style="{ width: '25rem' }" :header="selectedItem?.title" class="bg-neutral-900">
+        <Dialog v-model:visible="visible" modal :dismissableMask="true" closable
+            :style="{ width: 'min(91vw, 30rem)' }" :header="selectedItem?.title"
+            :pt="{
+                mask: { class: 'calc-dialog-mask' },
+                root: { class: 'calc-dialog-root' },
+                header: { class: 'calc-dialog-header' },
+                title: { class: 'calc-dialog-title' },
+                content: { class: 'calc-dialog-content' },
+                pcCloseButton: { class: 'calc-dialog-close' }
+            }">
             <component :is="selectedItem?.component" @go-dashboard="goToDashboard" />
         </Dialog>
     </section>
@@ -108,3 +117,59 @@ export default {
     }
 };
 </script>
+
+<style>
+.calc-dialog-mask {
+    background: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.calc-dialog-root {
+    border: none !important;
+    border-radius: 16px !important;
+    background: #171717 !important;
+    box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.5), 0 0 40px -8px rgba(132, 204, 22, 0.06) !important;
+    overflow: hidden;
+}
+
+.calc-dialog-header {
+    background: #171717 !important;
+    padding: 1.25rem 1.5rem 0.75rem !important;
+    border-bottom: 1px solid #262626 !important;
+    border-radius: 16px 16px 0 0 !important;
+}
+
+.calc-dialog-title {
+    color: #fafafa !important;
+    font-size: 1.125rem !important;
+    font-weight: 700 !important;
+    line-height: 1.5 !important;
+}
+
+.calc-dialog-content {
+    background: #171717 !important;
+    padding: 0.75rem 1.5rem 1.5rem !important;
+    border-radius: 0 0 16px 16px !important;
+}
+
+.calc-dialog-close {
+    color: #737373 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+    width: 2rem !important;
+    height: 2rem !important;
+}
+
+.calc-dialog-close:hover {
+    color: #fafafa !important;
+    background: #262626 !important;
+}
+
+.calc-dialog-close:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(132, 204, 22, 0.35) !important;
+}
+</style>

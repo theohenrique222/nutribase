@@ -8,20 +8,22 @@
         <FormField label="Nível de Atividade" v-model="activity" type="select" :options="activityOptions" />
 
         <!-- BOTÃO -->
-        <Button label="Calcular" severity="success" class="w-full" @click="calcular" />
+        <Button label="Calcular" severity="contrast" class="w-full" @click="calcular" />
 
         <!-- RESULTADO -->
-        <div v-if="resultado" class="result">
-            <p class="mb-2 font-bold">Consumo diário recomendado:</p>
-
-            <p>💧 {{ resultado.litros }} litros/dia</p>
-            <p class="mt-1 text-sm text-gray-600">
-                (~ {{ resultado.ml }} ml)
-            </p>
+        <div v-if="resultado"
+            class="relative overflow-hidden p-5 rounded-xl bg-gradient-to-br from-lime-500/10 to-emerald-500/5 border border-lime-500/20 text-center">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(132,204,22,0.08),transparent_60%)]"></div>
+            <div class="relative">
+                <p class="text-xs font-semibold tracking-wider uppercase text-lime-400/70 mb-1">Consumo Diário Recomendado</p>
+                <p class="text-3xl font-black text-lime-400">{{ resultado.litros }} <span class="text-lg font-semibold text-lime-400/70">litros</span></p>
+                <p class="text-sm text-neutral-500 mt-1">(~ {{ resultado.ml }} ml)</p>
+            </div>
         </div>
 
         <!-- CTA -->
-        <Button v-if="resultado" label="Testar versão completa" class="w-full" severity="warn"
+        <Button v-if="resultado" label="Ver análise completa no dashboard →"
+            class="w-full !bg-neutral-800 !border-neutral-700 text-neutral-300 hover:!bg-neutral-700 hover:!border-lime-500/30 transition-all"
             @click="$emit('go-dashboard')" />
 
     </div>
@@ -74,10 +76,4 @@ export default {
 </script>
 
 <style scoped>
-.result {
-    padding: 12px;
-    background: #cffafe;
-    border-radius: 8px;
-    text-align: center;
-}
 </style>

@@ -8,11 +8,17 @@
 
         <Button label="Calcular" class="w-full" severity="contrast" @click="calcular" />
 
-        <div v-if="resultado" class="result">
-            {{ resultado }} kcal/dia
+        <div v-if="resultado"
+            class="relative overflow-hidden p-5 rounded-xl bg-gradient-to-br from-lime-500/10 to-emerald-500/5 border border-lime-500/20 text-center">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(132,204,22,0.08),transparent_60%)]"></div>
+            <div class="relative">
+                <p class="text-xs font-semibold tracking-wider uppercase text-lime-400/70 mb-1">Taxa Metabólica Basal</p>
+                <p class="text-3xl font-black text-lime-400">{{ resultado }} <span class="text-lg font-semibold text-lime-400/70">kcal/dia</span></p>
+            </div>
         </div>
 
-        <Button v-if="resultado" label="Testar versão completa" class="w-full" severity="info"
+        <Button v-if="resultado" label="Ver análise completa no dashboard →"
+            class="w-full !bg-neutral-800 !border-neutral-700 text-neutral-300 hover:!bg-neutral-700 hover:!border-lime-500/30 transition-all"
             @click="$emit('go-dashboard')" />
     </div>
 </template>
@@ -50,10 +56,4 @@ export default {
 </script>
 
 <style scoped>
-.result {
-    padding: 10px;
-    background: #d9f99d;
-    text-align: center;
-    border-radius: 6px;
-}
 </style>
